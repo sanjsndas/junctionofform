@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories — Junction Of Forms</title>
+    <meta name="description" content="Browse all categories on Junction Of Forms — interior design, architecture, materials, lighting, and the art of living well.">
+    <link rel="canonical" href="https://www.junctionofforms.com/categories.html">
+    <meta property="og:title" content="Categories — Junction Of Forms">
+    <meta property="og:description" content="Browse all categories on Junction Of Forms — interior design, architecture, materials, lighting, and more.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1200">
+    <meta name="twitter:card" content="summary_large_image">
+    <style>
+        /* ------ RESET & BASE ------ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #fbf9f6;
+            --surface: #ffffff;
+            --ink: #1e1e1e;
+            --ink-soft: #3d3d3d;
+            --muted: #6b6b6b;
+            --border: #e2ddd6;
+            --accent: #a67c52;
+            --accent-soft: #f2ede7;
+            --serif: 'Georgia', 'Times New Roman', Times, serif;
+            --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            --radius: 4px;
+            --maxw: 1280px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--ink);
+            font-family: var(--sans);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            font-size: 16px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            color: var(--ink);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--accent);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: var(--serif);
+            font-weight: 400;
+            line-height: 1.25;
+            letter-spacing: -0.01em;
+        }
+
+        h1 { font-size: 2.8rem; }
+        h2 { font-size: 1.9rem; margin-bottom: 0.75rem; }
+        h3 { font-size: 1.35rem; margin-bottom: 0.5rem; }
+        h4 { font-size: 1.1rem; }
+
+        p {
+            margin-bottom: 1.25rem;
+            color: var(--ink-soft);
+        }
+
+        .container {
+            max-width: var(--maxw);
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* ------ HEADER ------ */
+        .site-header {
+            border-bottom: 1px solid var(--border);
+            background: var(--bg);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.25rem 0;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .logo {
+            font-family: var(--serif);
+            font-size: 1.6rem;
+            letter-spacing: -0.02em;
+            white-space: nowrap;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .main-nav {
+            display: flex;
+            gap: 1.75rem;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            flex-wrap: wrap;
+            list-style: none;
+        }
+
+        .main-nav a {
+            color: var(--ink-soft);
+        }
+
+        .main-nav a:hover,
+        .main-nav a.active {
+            color: var(--accent);
+        }
+
+        .search-wrap {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 0.35rem 0.75rem;
+            background: var(--surface);
+        }
+
+        .search-wrap input {
+            border: none;
+            background: transparent;
+            font-family: var(--sans);
+            font-size: 0.9rem;
+            outline: none;
+            width: 160px;
+            color: var(--ink);
+        }
+
+        .search-wrap input::placeholder {
+            color: #aaa;
+        }
+
+        .search-wrap button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            color: var(--muted);
+        }
+
+        /* ------ PAGE INTRO ------ */
+        .page-intro {
+            padding: 3.5rem 0 2.5rem;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .page-intro h1 {
+            margin-bottom: 0.75rem;
+        }
+
+        .page-intro p {
+            max-width: 640px;
+            margin: 0 auto;
+            color: var(--muted);
+            font-size: 1.05rem;
+        }
+
+        /* ------ CATEGORIES GRID ------ */
+        .categories-section {
+            padding: 3.5rem 0 4rem;
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .category-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            overflow: hidden;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .category-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+        }
+
+        .category-image {
+            aspect-ratio: 4 / 3;
+            overflow: hidden;
+            background: var(--accent-soft);
+        }
+
+        .category-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .category-card:hover .category-image img {
+            transform: scale(1.04);
+        }
+
+        .category-body {
+            padding: 1.75rem;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .category-body h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .category-body .category-desc {
+            font-size: 0.95rem;
+            color: var(--muted);
+            margin-bottom: 1.25rem;
+            flex: 1;
+        }
+
+        .category-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--muted);
+            border-top: 1px solid var(--border);
+            padding-top: 1rem;
+        }
+
+        .category-meta .count {
+            color: var(--accent);
+            font-weight: 500;
+        }
+
+        .category-link {
+            display: inline-block;
+            font-size: 0.85rem;
+            color: var(--accent);
+            margin-top: 0.5rem;
+            letter-spacing: 0.02em;
+            transition: color 0.2s;
+        }
+
+        .category-link:hover {
+            color: var(--ink);
+        }
+
+        /* ------ ALL ARTICLES CTA ------ */
+        .all-articles {
+            text-align: center;
+            margin-top: 3.5rem;
+            padding-top: 2.5rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .all-articles p {
+            color: var(--muted);
+            margin-bottom: 1.25rem;
+        }
+
+        .btn-outline {
+            display: inline-block;
+            padding: 0.75rem 2rem;
+            border: 1px solid var(--ink);
+            border-radius: var(--radius);
+            font-size: 0.9rem;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: var(--ink);
+            transition: all 0.2s;
+        }
+
+        .btn-outline:hover {
+            background: var(--ink);
+            color: #fff;
+            border-color: var(--ink);
+        }
+
+        /* ------ NEWSLETTER ------ */
+        .newsletter-section {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 2.5rem;
+            margin: 2rem 0 4rem;
+            text-align: center;
+        }
+
+        .newsletter-section h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .newsletter-section p {
+            color: var(--muted);
+            margin-bottom: 1.5rem;
+        }
+
+        .newsletter-form {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .newsletter-form input {
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            font-family: var(--sans);
+            font-size: 0.95rem;
+            width: 280px;
+            outline: none;
+            background: var(--bg);
+        }
+
+        .newsletter-form input:focus {
+            border-color: var(--accent);
+        }
+
+        .newsletter-form button {
+            padding: 0.75rem 1.5rem;
+            background: var(--ink);
+            color: #fff;
+            border: none;
+            border-radius: var(--radius);
+            font-family: var(--sans);
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .newsletter-form button:hover {
+            background: var(--accent);
+        }
+
+        /* ------ FOOTER ------ */
+        .site-footer {
+            border-top: 1px solid var(--border);
+            padding: 3.5rem 0 2rem;
+            background: var(--surface);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-grid h5 {
+            font-family: var(--sans);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--muted);
+            margin-bottom: 1rem;
+        }
+
+        .footer-grid ul {
+            list-style: none;
+        }
+
+        .footer-grid li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-grid a {
+            font-size: 0.9rem;
+            color: var(--ink-soft);
+        }
+
+        .footer-grid a:hover {
+            color: var(--accent);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--border);
+            padding-top: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: var(--muted);
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        /* ------ RESPONSIVE ------ */
+        @media (max-width: 1024px) {
+            .categories-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 720px) {
+            h1 { font-size: 2rem; }
+            .page-intro h1 { font-size: 2.2rem; }
+            .header-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .main-nav {
+                gap: 1rem;
+                font-size: 0.8rem;
+            }
+            .search-wrap input {
+                width: 120px;
+            }
+            .categories-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            .newsletter-form {
+                flex-direction: column;
+                align-items: center;
+            }
+            .newsletter-form input {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+    <div class="container header-inner">
+        <a href="index.html" class="logo">Junction <span>Of</span> Forms</a>
+        <nav class="main-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="terms.html">Terms Of Privacy</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="cookies.html">Cookies Policy</a></li>
+            <li><a href="disclaimer.html">Disclaimer</a></li>
+            <li><a href="categories.html" class="active">Categories</a></li>
+        </nav>
+        <div class="search-wrap">
+            <input type="text" id="searchInput" placeholder="Search articles..." aria-label="Search articles">
+            <button onclick="performSearch()" aria-label="Search">⌕</button>
+        </div>
+    </div>
+</header>
+
+<!-- ============ MAIN ============ -->
+<main>
+    <!-- PAGE INTRO -->
+    <section class="page-intro">
+        <div class="container">
+            <h1>Categories</h1>
+            <p>Explore our archive by theme. Each category gathers essays, profiles, and visual stories from the world of design and architecture.</p>
+        </div>
+    </section>
+
+    <!-- CATEGORIES GRID -->
+    <section class="categories-section">
+        <div class="container">
+            <div class="categories-grid">
+
+                <!-- 1. INTERIOR DESIGN -->
+                <article class="category-card">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80" alt="Interior design living room" loading="lazy">
+                    </div>
+                    <div class="category-body">
+                        <h2>Interior Design</h2>
+                        <p class="category-desc">Considered interiors, from minimalist apartments to layered, lived-in homes. We look at how space shapes the way we live.</p>
+                        <div class="category-meta">
+                            <span class="count">24 articles</span>
+                            <a href="#" class="category-link">Browse →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 2. ARCHITECTURE -->
+                <article class="category-card">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=800&q=80" alt="Modern architecture building" loading="lazy">
+                    </div>
+                    <div class="category-body">
+                        <h2>Architecture</h2>
+                        <p class="category-desc">Buildings that matter — residential, civic, and experimental. We trace the ideas and details behind enduring structures.</p>
+                        <div class="category-meta">
+                            <span class="count">18 articles</span>
+                            <a href="#" class="category-link">Browse →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 3. MATERIALS -->
+                <article class="category-card">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=800&q=80" alt="Natural stone and wood materials" loading="lazy">
+                    </div>
+                    <div class="category-body">
+                        <h2>Materials</h2>
+                        <p class="category-desc">Stone, timber, clay, metal. A closer look at the substances that give buildings and interiors their texture and character.</p>
+                        <div class="category-meta">
+                            <span class="count">15 articles</span>
+                            <a href="#" class="category-link">Browse →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 4. LIGHTING -->
+                <article class="category-card">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?w=800&q=80" alt="Warm interior lighting" loading="lazy">
+                    </div>
+                    <div class="category-body">
+                        <h2>Lighting</h2>
+                        <p class="category-desc">How light shapes atmosphere, from daylight studies to the quiet art of a well-placed lamp. Illumination as a design tool.</p>
+                        <div class="category-meta">
+                            <span class="count">12 articles</span>
+                            <a href="#" class="category-link">Browse →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 5. ART OF LIVING -->
+                <article class="category-card">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&q=80" alt="Slow living home interior" loading="lazy">
+                    </div>
+                    <div class="category-body">
+                        <h2>Art of Living</h2>
+                        <p class="category-desc">Rituals, routines, and the small choices that make a home feel like your own. Design as a way of life, not just a look.</p>
+                        <div class="category-meta">
+                            <span class="count">21 articles</span>
+                            <a href="#" class="category-link">Browse →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 6. TRAVEL & PLACES -->
+                <article class="category-card">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&q=80" alt="European city architecture travel" loading="lazy">
+                    </div>
+                    <div class="category-body">
+                        <h2>Travel & Places</h2>
+                        <p class="category-desc">Design destinations, from quiet Japanese inns to brutalist Belgrade. We report on places worth travelling for — and why.</p>
+                        <div class="category-meta">
+                            <span class="count">9 articles</span>
+                            <a href="#" class="category-link">Browse →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 7. PROFILES -->
+                <article class="category-card">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80" alt="Designer portrait in studio" loading="lazy">
+                    </div>
+                    <div class="category-body">
+                        <h2>Profiles</h2>
+                        <p class="category-desc">Conversations with architects, designers, makers, and thinkers. The people behind the spaces and objects we admire.</p>
+                        <div class="category-meta">
+                            <span class="count">14 articles</span>
+                            <a href="#" class="category-link">Browse →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 8. OBJECTS -->
+                <article class="category-card">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=800&q=80" alt="Ceramic vase and design object" loading="lazy">
+                    </div>
+                    <div class="category-body">
+                        <h2>Objects</h2>
+                        <p class="category-desc">Furniture, ceramics, textiles, and tools. The pieces we live with, and the craft behind their making.</p>
+                        <div class="category-meta">
+                            <span class="count">17 articles</span>
+                            <a href="#" class="category-link">Browse →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 9. ESSAYS -->
+                <article class="category-card">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&q=80" alt="Writing and reflection on design" loading="lazy">
+                    </div>
+                    <div class="category-body">
+                        <h2>Essays</h2>
+                        <p class="category-desc">Longer reflections on design, taste, memory, and the built environment. Slower reads for a quieter moment.</p>
+                        <div class="category-meta">
+                            <span class="count">11 articles</span>
+                            <a href="#" class="category-link">Browse →</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- ALL ARTICLES CTA -->
+            <div class="all-articles">
+                <p>Looking for something specific? Browse every article in our full archive.</p>
+                <a href="index.html" class="btn-outline">View All Articles</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <div class="container">
+        <section class="newsletter-section">
+            <h3>The Junction Letter</h3>
+            <p>One thoughtful essay on design and architecture, delivered every other Sunday. No spam, no product pushes.</p>
+            <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+                <input type="email" placeholder="Your email address" required aria-label="Email address">
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
+    </div>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <h5>Junction Of Forms</h5>
+                <p style="font-size:0.9rem;color:var(--muted);max-width:300px;">An independent publication about interior design, architecture, and the art of living well. Published from London & Milan.</p>
+            </div>
+            <div>
+                <h5>Explore</h5>
+                <ul>
+                    <li><a href="categories.html">Interior Design</a></li>
+                    <li><a href="categories.html">Architecture</a></li>
+                    <li><a href="categories.html">Materials</a></li>
+                    <li><a href="categories.html">Lighting</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5>Information</h5>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5>Follow</h5>
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Pinterest</a></li>
+                    <li><a href="#">Substack</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2025 Junction Of Forms. All rights reserved.</span>
+            <span>Made with restraint.</span>
+        </div>
+    </div>
+</footer>
+
+<!-- ============ SCRIPTS ============ -->
+<script>
+    // Search functionality
+    const searchInput = document.getElementById('searchInput');
+
+    function performSearch() {
+        const query = searchInput.value.trim();
+        if (query) {
+            alert('Searching for: "' + query + '"\n\nIn a full implementation, this would show search results across all articles.');
+        }
+    }
+
+    searchInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') {
+            performSearch();
+        }
+    });
+
+    // Newsletter subscription
+    function subscribeNewsletter(e) {
+        e.preventDefault();
+        const form = e.target;
+        const input = form.querySelector('input');
+        const email = input.value.trim();
+        if (email) {
+            alert('Thank you for subscribing to The Junction Letter. Please check your inbox to confirm.');
+            input.value = '';
+        }
+    }
+</script>
+
+<!-- Schema Markup -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Categories — Junction Of Forms",
+    "description": "Browse all categories on Junction Of Forms — interior design, architecture, materials, lighting, and more.",
+    "url": "https://www.junctionofforms.com/categories.html",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Junction Of Forms",
+        "url": "https://www.junctionofforms.com/"
+    }
+}
+</script>
+
+</body>
+</html>

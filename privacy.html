@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — Junction Of Forms</title>
+    <meta name="description" content="Privacy policy for Junction Of Forms. Learn how we collect, use, and protect your personal information.">
+    <link rel="canonical" href="https://www.junctionofforms.com/privacy.html">
+    <meta property="og:title" content="Privacy Policy — Junction Of Forms">
+    <meta property="og:description" content="How we handle your data with care and transparency. Read our full privacy policy.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1200">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <style>
+        /* ------ RESET & BASE ------ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #fbf9f6;
+            --surface: #ffffff;
+            --ink: #1e1e1e;
+            --ink-soft: #3d3d3d;
+            --muted: #6b6b6b;
+            --border: #e2ddd6;
+            --accent: #a67c52;
+            --accent-soft: #f2ede7;
+            --serif: 'Georgia', 'Times New Roman', Times, serif;
+            --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            --radius: 4px;
+            --maxw: 1280px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--ink);
+            font-family: var(--sans);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            font-size: 16px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            color: var(--ink);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--accent);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: var(--serif);
+            font-weight: 400;
+            line-height: 1.25;
+            letter-spacing: -0.01em;
+        }
+
+        h1 { font-size: 2.6rem; }
+        h2 { font-size: 1.7rem; margin: 2.5rem 0 0.75rem; }
+        h3 { font-size: 1.3rem; margin: 1.75rem 0 0.5rem; }
+        h4 { font-size: 1.1rem; }
+
+        p {
+            margin-bottom: 1.25rem;
+            color: var(--ink-soft);
+        }
+
+        ul, ol {
+            margin: 0 0 1.5rem 1.5rem;
+            color: var(--ink-soft);
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .container {
+            max-width: var(--maxw);
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* ------ HEADER (consistent) ------ */
+        .site-header {
+            border-bottom: 1px solid var(--border);
+            background: var(--bg);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.25rem 0;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .logo {
+            font-family: var(--serif);
+            font-size: 1.6rem;
+            letter-spacing: -0.02em;
+            white-space: nowrap;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .main-nav {
+            display: flex;
+            gap: 1.75rem;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            flex-wrap: wrap;
+        }
+
+        .main-nav a {
+            color: var(--ink-soft);
+        }
+
+        .main-nav a:hover {
+            color: var(--accent);
+        }
+
+        .search-wrap {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 0.35rem 0.75rem;
+            background: var(--surface);
+        }
+
+        .search-wrap input {
+            border: none;
+            background: transparent;
+            font-family: var(--sans);
+            font-size: 0.9rem;
+            outline: none;
+            width: 160px;
+            color: var(--ink);
+        }
+
+        .search-wrap input::placeholder {
+            color: #aaa;
+        }
+
+        .search-wrap button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            color: var(--muted);
+        }
+
+        /* ------ MAIN / PRIVACY LAYOUT ------ */
+        .site-main {
+            padding: 3rem 0 5rem;
+        }
+
+        .privacy-grid {
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .privacy-content {
+            max-width: 780px;
+        }
+
+        .privacy-content h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.75rem;
+            line-height: 1.15;
+        }
+
+        .privacy-meta {
+            font-size: 0.9rem;
+            color: var(--muted);
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.25rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .privacy-content h2:first-of-type {
+            margin-top: 0;
+        }
+
+        .privacy-content .lead {
+            font-size: 1.15rem;
+            color: var(--muted);
+            margin-bottom: 2rem;
+        }
+
+        .privacy-content strong {
+            color: var(--ink);
+            font-weight: 600;
+        }
+
+        .privacy-content a {
+            color: var(--accent);
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        .privacy-content a:hover {
+            color: var(--ink);
+        }
+
+        .highlight-box {
+            background: var(--accent-soft);
+            border-left: 3px solid var(--accent);
+            padding: 1.25rem 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 var(--radius) var(--radius) 0;
+        }
+
+        .highlight-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .privacy-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0 2rem;
+            font-size: 0.9rem;
+        }
+
+        .privacy-content th,
+        .privacy-content td {
+            text-align: left;
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--border);
+        }
+
+        .privacy-content th {
+            background: var(--accent-soft);
+            font-weight: 600;
+            color: var(--ink);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .privacy-content td {
+            color: var(--ink-soft);
+        }
+
+        /* ------ SIDEBAR (table of contents) ------ */
+        .privacy-sidebar {
+            position: sticky;
+            top: 100px;
+        }
+
+        .toc-widget {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.75rem;
+            margin-bottom: 2rem;
+        }
+
+        .toc-widget h4 {
+            font-family: var(--sans);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--muted);
+            margin-bottom: 1.25rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .toc-widget ul {
+            list-style: none;
+            margin: 0;
+        }
+
+        .toc-widget li {
+            margin-bottom: 0.6rem;
+            font-size: 0.9rem;
+        }
+
+        .toc-widget li a {
+            color: var(--ink-soft);
+            display: block;
+            padding: 0.2rem 0;
+            border-left: 2px solid transparent;
+            padding-left: 0.75rem;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        .toc-widget li a:hover,
+        .toc-widget li a.active {
+            color: var(--accent);
+            border-left-color: var(--accent);
+        }
+
+        .sidebar-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+        }
+
+        .sidebar-card p {
+            font-size: 0.9rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .sidebar-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .sidebar-card .icon {
+            font-size: 1.5rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+
+        /* ------ BACK TO TOP ------ */
+        .back-to-top {
+            display: inline-block;
+            margin-top: 2.5rem;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--muted);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.2rem;
+        }
+
+        .back-to-top:hover {
+            color: var(--accent);
+            border-color: var(--accent);
+        }
+
+        /* ------ FOOTER (consistent) ------ */
+        .site-footer {
+            border-top: 1px solid var(--border);
+            padding: 3.5rem 0 2rem;
+            background: var(--surface);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-grid h5 {
+            font-family: var(--sans);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--muted);
+            margin-bottom: 1rem;
+        }
+
+        .footer-grid ul {
+            list-style: none;
+            margin: 0;
+        }
+
+        .footer-grid li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-grid a {
+            font-size: 0.9rem;
+            color: var(--ink-soft);
+        }
+
+        .footer-grid a:hover {
+            color: var(--accent);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--border);
+            padding-top: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: var(--muted);
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        /* ------ RESPONSIVE ------ */
+        @media (max-width: 1024px) {
+            .privacy-grid {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+            .privacy-sidebar {
+                position: static;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 720px) {
+            h1 { font-size: 2rem; }
+            .privacy-content h1 { font-size: 2rem; }
+            .header-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .main-nav {
+                gap: 1rem;
+                font-size: 0.8rem;
+            }
+            .search-wrap input {
+                width: 120px;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            .privacy-content table {
+                font-size: 0.8rem;
+            }
+            .privacy-content th,
+            .privacy-content td {
+                padding: 0.5rem 0.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+    <div class="container header-inner">
+        <a href="index.html" class="logo">Junction <span>Of</span> Forms</a>
+        <nav class="main-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="terms.html">Terms Of Privacy</a></li>
+            <li><a href="privacy.html" style="color:var(--accent);">Privacy Policy</a></li>
+            <li><a href="cookies.html">Cookies Policy</a></li>
+            <li><a href="disclaimer.html">Disclaimer</a></li>
+            <li><a href="categories.html">Categories</a></li>
+        </nav>
+        <div class="search-wrap">
+            <input type="text" id="searchInput" placeholder="Search articles..." aria-label="Search articles">
+            <button onclick="performSearch()" aria-label="Search">⌕</button>
+        </div>
+    </div>
+</header>
+
+<!-- ============ MAIN ============ -->
+<main class="site-main">
+    <div class="container">
+        <div class="privacy-grid">
+
+            <!-- LEFT: PRIVACY CONTENT -->
+            <div class="privacy-content">
+                <h1>Privacy Policy</h1>
+                <div class="privacy-meta">
+                    Last updated: <strong>15 March 2025</strong> &nbsp;·&nbsp; Effective: 15 March 2025
+                </div>
+
+                <p class="lead">Junction Of Forms (“we”, “us”, “our”) respects your privacy and is committed to protecting your personal data. This policy explains what we collect, why we collect it, and how you can exercise your rights.</p>
+
+                <p>We keep things simple: we only ask for information we genuinely need, we never sell your data, and we aim to be transparent about every tool and process we use. This policy applies to <strong>www.junctionofforms.com</strong> and any related services that link to it.</p>
+
+                <div class="highlight-box">
+                    <p><strong>In short:</strong> We collect minimal analytics, we use cookies to improve your reading experience, and we only store your email if you choose to subscribe or contact us. You can request deletion at any time by writing to <a href="mailto:privacy@junctionofforms.com">privacy@junctionofforms.com</a>.</p>
+                </div>
+
+                <!-- 1. DATA WE COLLECT -->
+                <h2 id="data-we-collect">1. Data we collect</h2>
+                <p>We collect information in three ways: information you give us, information collected automatically, and information from third parties.</p>
+
+                <h3>Information you give us</h3>
+                <ul>
+                    <li><strong>Contact form submissions</strong> — your name, email address, subject, and message content when you write to our editorial team.</li>
+                    <li><strong>Newsletter subscriptions</strong> — your email address and, optionally, your first name.</li>
+                    <li><strong>Comments and feedback</strong> — any information you voluntarily provide in response to an article.</li>
+                </ul>
+
+                <h3>Information collected automatically</h3>
+                <ul>
+                    <li><strong>Analytics data</strong> — pages viewed, time on page, referring URL, approximate location (country/city level), device type, and browser. We use privacy-friendly analytics that do not track you across other websites.</li>
+                    <li><strong>Cookies and similar technologies</strong> — small files stored on your device. See our <a href="cookies.html">Cookies Policy</a> for full details.</li>
+                </ul>
+
+                <h3>Information from third parties</h3>
+                <p>We do not purchase or receive personal data from data brokers. If you interact with our social media accounts (Instagram, Pinterest, Substack), those platforms may share aggregated, anonymised insights with us.</p>
+
+                <!-- 2. HOW WE USE YOUR DATA -->
+                <h2 id="how-we-use">2. How we use your data</h2>
+                <p>We use your personal data only for the purposes listed below, and only when we have a lawful basis to do so under the UK GDPR and EU GDPR.</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Purpose</th>
+                            <th>Data used</th>
+                            <th>Lawful basis</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Responding to your inquiry</td>
+                            <td>Name, email, message</td>
+                            <td>Legitimate interest / consent</td>
+                        </tr>
+                        <tr>
+                            <td>Sending our newsletter</td>
+                            <td>Email, first name</td>
+                            <td>Consent (you opt in)</td>
+                        </tr>
+                        <tr>
+                            <td>Understanding what readers enjoy</td>
+                            <td>Anonymised analytics</td>
+                            <td>Legitimate interest</td>
+                        </tr>
+                        <tr>
+                            <td>Improving site performance & security</td>
+                            <td>Technical logs, cookies</td>
+                            <td>Legitimate interest</td>
+                        </tr>
+                        <tr>
+                            <td>Complying with legal obligations</td>
+                            <td>Any relevant records</td>
+                            <td>Legal obligation</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p>We will never use your data for automated decision-making or profiling that produces legal or similarly significant effects.</p>
+
+                <!-- 3. COOKIES -->
+                <h2 id="cookies">3. Cookies &amp; similar technologies</h2>
+                <p>We use a minimal set of cookies to keep the site running smoothly and to understand which articles resonate with readers. You can control cookies through your browser settings at any time.</p>
+                <ul>
+                    <li><strong>Essential cookies</strong> — required for basic site functionality (e.g. remembering your cookie preferences). These cannot be switched off.</li>
+                    <li><strong>Analytics cookies</strong> — help us see which pages are read most, so we can plan future stories. These are anonymised and aggregated.</li>
+                    <li><strong>Preference cookies</strong> — remember choices you make, such as dismissing a notice.</li>
+                </ul>
+                <p>For a full breakdown, including how to withdraw consent, please read our <a href="cookies.html">Cookies Policy</a>.</p>
+
+                <!-- 4. SHARING YOUR DATA -->
+                <h2 id="sharing">4. Sharing your data</h2>
+                <p>We do not sell, rent, or trade your personal data. We share it only with trusted service providers who help us operate the site, and only to the extent necessary:</p>
+                <ul>
+                    <li><strong>Email delivery provider</strong> — to send our newsletter (only if you subscribe).</li>
+                    <li><strong>Analytics provider</strong> — to collect anonymised usage statistics.</li>
+                    <li><strong>Hosting provider</strong> — to store the website and its data securely.</li>
+                </ul>
+                <p>All processors are bound by data-processing agreements and are required to protect your information. We may also disclose data if required by law or to protect our legal rights.</p>
+
+                <!-- 5. INTERNATIONAL TRANSFERS -->
+                <h2 id="transfers">5. International transfers</h2>
+                <p>Some of our service providers may store data outside the UK or European Economic Area (EEA). When that happens, we ensure appropriate safeguards are in place — such as UK adequacy regulations, the EU-US Data Privacy Framework, or standard contractual clauses — so your data remains protected.</p>
+
+                <!-- 6. RETENTION -->
+                <h2 id="retention">6. How long we keep your data</h2>
+                <ul>
+                    <li><strong>Contact form messages</strong> — kept for up to 24 months, then deleted, unless we are in an ongoing conversation.</li>
+                    <li><strong>Newsletter subscriptions</strong> — kept until you unsubscribe, plus a short period to honour your request.</li>
+                    <li><strong>Analytics data</strong> — retained in anonymised form for up to 26 months.</li>
+                    <li><strong>Legal records</strong> — kept as long as required by applicable law.</li>
+                </ul>
+
+                <!-- 7. YOUR RIGHTS -->
+                <h2 id="your-rights">7. Your rights</h2>
+                <p>Depending on where you live, you may have the following rights regarding your personal data:</p>
+                <ul>
+                    <li><strong>Access</strong> — request a copy of the data we hold about you.</li>
+                    <li><strong>Rectification</strong> — ask us to correct inaccurate or incomplete data.</li>
+                    <li><strong>Erasure</strong> — ask us to delete your data (“right to be forgotten”).</li>
+                    <li><strong>Restriction</strong> — ask us to limit how we use your data.</li>
+                    <li><strong>Portability</strong> — receive your data in a structured, machine-readable format.</li>
+                    <li><strong>Objection</strong> — object to processing based on legitimate interests.</li>
+                    <li><strong>Withdraw consent</strong> — where processing is based on consent, you can withdraw it at any time.</li>
+                </ul>
+                <p>To exercise any of these rights, email <a href="mailto:privacy@junctionofforms.com">privacy@junctionofforms.com</a>. We will respond within 30 days. You also have the right to lodge a complaint with your local data protection authority — in the UK, that’s the <a href="https://ico.org.uk" target="_blank" rel="noopener">Information Commissioner’s Office (ICO)</a>.</p>
+
+                <!-- 8. SECURITY -->
+                <h2 id="security">8. Security</h2>
+                <p>We take reasonable technical and organisational measures to protect your data — including HTTPS encryption, access controls, and regular reviews of our service providers. No method of transmission over the internet is 100% secure, but we work hard to keep your information safe.</p>
+
+                <!-- 9. CHILDREN -->
+                <h2 id="children">9. Children’s privacy</h2>
+                <p>Our content is intended for a general audience and is not directed at children under 16. We do not knowingly collect personal data from children. If you believe a child has provided us with personal information, please contact us and we will delete it promptly.</p>
+
+                <!-- 10. CHANGES -->
+                <h2 id="changes">10. Changes to this policy</h2>
+                <p>We may update this Privacy Policy from time to time to reflect changes in our practices or the law. The “Last updated” date at the top of this page will always reflect the most recent version. We encourage you to review this page periodically.</p>
+
+                <!-- 11. CONTACT -->
+                <h2 id="contact">11. Contact us</h2>
+                <p>If you have any questions about this policy or how we handle your data, please get in touch:</p>
+                <ul>
+                    <li><strong>Email:</strong> <a href="mailto:privacy@junctionofforms.com">privacy@junctionofforms.com</a></li>
+                    <li><strong>Post:</strong> Junction Of Forms, 12 Clerkenwell Green, London EC1R 0DP, United Kingdom</li>
+                </ul>
+                <p>For general editorial inquiries, please use our <a href="contact.html">contact page</a>.</p>
+
+                <a href="#" class="back-to-top">↑ Back to top</a>
+            </div>
+
+            <!-- RIGHT: SIDEBAR / TOC -->
+            <aside class="privacy-sidebar">
+                <div class="toc-widget">
+                    <h4>On this page</h4>
+                    <ul>
+                        <li><a href="#data-we-collect">1. Data we collect</a></li>
+                        <li><a href="#how-we-use">2. How we use your data</a></li>
+                        <li><a href="#cookies">3. Cookies</a></li>
+                        <li><a href="#sharing">4. Sharing your data</a></li>
+                        <li><a href="#transfers">5. International transfers</a></li>
+                        <li><a href="#retention">6. Retention</a></li>
+                        <li><a href="#your-rights">7. Your rights</a></li>
+                        <li><a href="#security">8. Security</a></li>
+                        <li><a href="#children">9. Children’s privacy</a></li>
+                        <li><a href="#changes">10. Changes</a></li>
+                        <li><a href="#contact">11. Contact us</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-card">
+                    <div class="icon">✉</div>
+                    <p><strong>Privacy questions?</strong></p>
+                    <p>Write to <a href="mailto:privacy@junctionofforms.com" style="color:var(--accent);">privacy@junctionofforms.com</a> and we’ll respond within 30 days.</p>
+                </div>
+
+                <div class="sidebar-card" style="margin-top:1.5rem;">
+                    <p style="font-size:0.85rem;color:var(--muted);">This policy is written in plain English. If anything is unclear, please ask — we’d rather explain than confuse.</p>
+                </div>
+            </aside>
+        </div>
+    </div>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <h5>Junction Of Forms</h5>
+                <p style="font-size:0.9rem;color:var(--muted);max-width:300px;">An independent publication about interior design, architecture, and the art of living well. Published from London &amp; Milan.</p>
+            </div>
+            <div>
+                <h5>Explore</h5>
+                <ul>
+                    <li><a href="categories.html">Interior Design</a></li>
+                    <li><a href="categories.html">Architecture</a></li>
+                    <li><a href="categories.html">Materials</a></li>
+                    <li><a href="categories.html">Lighting</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5>Information</h5>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5>Follow</h5>
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Pinterest</a></li>
+                    <li><a href="#">Substack</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2025 Junction Of Forms. All rights reserved.</span>
+            <span>Made with restraint.</span>
+        </div>
+    </div>
+</footer>
+
+<!-- ============ SCRIPTS ============ -->
+<script>
+    // ---------- SEARCH (placeholder — behaves like main site) ----------
+    function performSearch() {
+        const query = document.getElementById('searchInput').value.trim();
+        if (query) {
+            alert(`Searching for "${query}" — in the full journal, this would filter articles. (Demo only)`);
+        } else {
+            alert('Please enter a search term.');
+        }
+    }
+
+    // Allow Enter key on search
+    document.getElementById('searchInput').addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') {
+            performSearch();
+        }
+    });
+
+    // ---------- TOC ACTIVE STATE (scroll spy) ----------
+    (function() {
+        const tocLinks = document.querySelectorAll('.toc-widget a');
+        const sections = [];
+
+        tocLinks.forEach(link => {
+            const id = link.getAttribute('href').substring(1);
+            const section = document.getElementById(id);
+            if (section) {
+                sections.push({ id, link, section });
+            }
+        });
+
+        function updateActive() {
+            const scrollPos = window.scrollY + 140; // offset for sticky header
+            let current = null;
+
+            sections.forEach(item => {
+                if (item.section.offsetTop <= scrollPos) {
+                    current = item;
+                }
+            });
+
+            tocLinks.forEach(l => l.classList.remove('active'));
+            if (current) {
+                current.link.classList.add('active');
+            }
+        }
+
+        window.addEventListener('scroll', updateActive, { passive: true });
+        window.addEventListener('load', updateActive);
+        updateActive();
+    })();
+
+    // ---------- SMOOTH ANCHOR OFFSET (account for sticky header) ----------
+    document.querySelectorAll('.toc-widget a, .back-to-top').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (href && href.startsWith('#')) {
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) {
+                    const headerOffset = 90;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                    window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+                }
+            }
+        });
+    });
+</script>
+
+<!-- Schema markup for PrivacyPolicy -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Privacy Policy — Junction Of Forms",
+    "description": "Privacy policy for Junction Of Forms. Learn how we collect, use, and protect your personal information.",
+    "url": "https://www.junctionofforms.com/privacy.html",
+    "dateModified": "2025-03-15",
+    "isPartOf": {
+        "@type": "WebSite",
+        "name": "Junction Of Forms",
+        "url": "https://www.junctionofforms.com"
+    },
+    "about": {
+        "@type": "Thing",
+        "name": "Privacy Policy"
+    }
+}
+</script>
+
+</body>
+</html>

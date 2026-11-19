@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Junction Of Forms — Interior Design & Architecture Journal</title>
+    <meta name="description" content="An independent publication for architects, designers, and thoughtful homeowners. Explore long-form articles on spatial planning, materials, light, and the art of living well.">
+    <link rel="canonical" href="https://www.junctionofforms.com/">
+    <meta property="og:title" content="Junction Of Forms — Interior Design & Architecture Journal">
+    <meta property="og:description" content="Long-form articles on interior design, residential architecture, materials, and the principles of beautiful, functional space.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1200">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <style>
+        /* ------ RESET & BASE ------ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #fbf9f6;
+            --surface: #ffffff;
+            --ink: #1e1e1e;
+            --ink-soft: #3d3d3d;
+            --muted: #6b6b6b;
+            --border: #e2ddd6;
+            --accent: #a67c52;
+            --accent-soft: #f2ede7;
+            --serif: 'Georgia', 'Times New Roman', Times, serif;
+            --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            --radius: 4px;
+            --maxw: 1280px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--ink);
+            font-family: var(--sans);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            font-size: 16px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            color: var(--ink);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--accent);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: var(--serif);
+            font-weight: 400;
+            line-height: 1.25;
+            letter-spacing: -0.01em;
+        }
+
+        h1 { font-size: 2.6rem; }
+        h2 { font-size: 1.9rem; margin-bottom: 0.75rem; }
+        h3 { font-size: 1.35rem; margin-bottom: 0.5rem; }
+        h4 { font-size: 1.1rem; }
+
+        p {
+            margin-bottom: 1.25rem;
+            color: var(--ink-soft);
+        }
+
+        .container {
+            max-width: var(--maxw);
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* ------ HEADER ------ */
+        .site-header {
+            border-bottom: 1px solid var(--border);
+            background: var(--bg);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.25rem 0;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .logo {
+            font-family: var(--serif);
+            font-size: 1.6rem;
+            letter-spacing: -0.02em;
+            white-space: nowrap;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .main-nav {
+            display: flex;
+            gap: 1.75rem;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            flex-wrap: wrap;
+        }
+
+        .main-nav a {
+            color: var(--ink-soft);
+        }
+
+        .main-nav a:hover {
+            color: var(--accent);
+        }
+
+        .search-wrap {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 0.35rem 0.75rem;
+            background: var(--surface);
+        }
+
+        .search-wrap input {
+            border: none;
+            background: transparent;
+            font-family: var(--sans);
+            font-size: 0.9rem;
+            outline: none;
+            width: 160px;
+            color: var(--ink);
+        }
+
+        .search-wrap input::placeholder {
+            color: #aaa;
+        }
+
+        .search-wrap button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            color: var(--muted);
+        }
+
+        /* ------ LAYOUT ------ */
+        .site-main {
+            padding: 3rem 0 5rem;
+        }
+
+        .layout-grid {
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 3.5rem;
+            align-items: start;
+        }
+
+        /* ------ FEATURED ARTICLE ------ */
+        .featured-article {
+            margin-bottom: 3.5rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 3rem;
+        }
+
+        .featured-article .meta {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--accent);
+            margin-bottom: 0.75rem;
+        }
+
+        .featured-article h1 {
+            font-size: 2.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .featured-article .excerpt {
+            font-size: 1.15rem;
+            color: var(--muted);
+            max-width: 700px;
+            margin-bottom: 1.5rem;
+        }
+
+        .featured-article img {
+            width: 100%;
+            height: 420px;
+            object-fit: cover;
+            border-radius: var(--radius);
+            margin-bottom: 1.5rem;
+        }
+
+        /* ------ ARTICLE CARDS ------ */
+        .section-label {
+            font-family: var(--sans);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--muted);
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.75rem;
+        }
+
+        .article-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .article-card {
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 1.5rem;
+        }
+
+        .article-card .cat {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+
+        .article-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .article-card h3 a:hover {
+            color: var(--accent);
+        }
+
+        .article-card .excerpt {
+            font-size: 0.95rem;
+            color: var(--muted);
+            margin-bottom: 0.75rem;
+        }
+
+        .article-card .read-time {
+            font-size: 0.8rem;
+            color: #999;
+        }
+
+        .article-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: var(--radius);
+            margin-bottom: 1rem;
+        }
+
+        /* ------ CATEGORY FILTERS ------ */
+        .category-filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-bottom: 2rem;
+        }
+
+        .category-filters button {
+            background: transparent;
+            border: 1px solid var(--border);
+            padding: 0.4rem 1rem;
+            border-radius: 100px;
+            font-family: var(--sans);
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            color: var(--ink-soft);
+        }
+
+        .category-filters button:hover,
+        .category-filters button.active {
+            background: var(--ink);
+            color: #fff;
+            border-color: var(--ink);
+        }
+
+        /* ------ SIDEBAR ------ */
+        .sidebar {
+            position: sticky;
+            top: 100px;
+        }
+
+        .sidebar-widget {
+            margin-bottom: 2.5rem;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+        }
+
+        .sidebar-widget h4 {
+            font-family: var(--sans);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--muted);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .sidebar-widget ul {
+            list-style: none;
+        }
+
+        .sidebar-widget li {
+            margin-bottom: 0.75rem;
+            font-size: 0.9rem;
+        }
+
+        .sidebar-widget li a {
+            color: var(--ink-soft);
+        }
+
+        .sidebar-widget li a:hover {
+            color: var(--accent);
+        }
+
+        .sidebar-widget .author {
+            display: flex;
+            gap: 0.75rem;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .sidebar-widget .author img {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .sidebar-widget .author p {
+            font-size: 0.85rem;
+            margin-bottom: 0.2rem;
+        }
+
+        /* ------ FAQ ------ */
+        .faq-section {
+            margin: 4rem 0;
+            border-top: 1px solid var(--border);
+            padding-top: 3rem;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border);
+            padding: 1.25rem 0;
+        }
+
+        .faq-question {
+            font-family: var(--serif);
+            font-size: 1.15rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.4rem;
+            color: var(--accent);
+            transition: transform 0.2s;
+        }
+
+        .faq-item.open .faq-question::after {
+            content: '−';
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding-top: 0;
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        .faq-item.open .faq-answer {
+            max-height: 400px;
+            padding-top: 0.75rem;
+        }
+
+        /* ------ NEWSLETTER ------ */
+        .newsletter-section {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 2.5rem;
+            margin: 4rem 0;
+            text-align: center;
+        }
+
+        .newsletter-section h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .newsletter-section p {
+            color: var(--muted);
+            margin-bottom: 1.5rem;
+        }
+
+        .newsletter-form {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .newsletter-form input {
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            font-family: var(--sans);
+            font-size: 0.95rem;
+            width: 280px;
+            outline: none;
+            background: var(--bg);
+        }
+
+        .newsletter-form input:focus {
+            border-color: var(--accent);
+        }
+
+        .newsletter-form button {
+            padding: 0.75rem 1.5rem;
+            background: var(--ink);
+            color: #fff;
+            border: none;
+            border-radius: var(--radius);
+            font-family: var(--sans);
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .newsletter-form button:hover {
+            background: var(--accent);
+        }
+
+        /* ------ FOOTER ------ */
+        .site-footer {
+            border-top: 1px solid var(--border);
+            padding: 3.5rem 0 2rem;
+            background: var(--surface);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-grid h5 {
+            font-family: var(--sans);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--muted);
+            margin-bottom: 1rem;
+        }
+
+        .footer-grid ul {
+            list-style: none;
+        }
+
+        .footer-grid li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-grid a {
+            font-size: 0.9rem;
+            color: var(--ink-soft);
+        }
+
+        .footer-grid a:hover {
+            color: var(--accent);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--border);
+            padding-top: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: var(--muted);
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        /* ------ ARTICLE FULL VIEW (hidden by default) ------ */
+        .article-full {
+            display: none;
+            max-width: 780px;
+            margin: 0 auto;
+        }
+
+        .article-full.active {
+            display: block;
+        }
+
+        .article-full h2 {
+            margin-top: 2rem;
+        }
+
+        .article-full h3 {
+            margin-top: 1.5rem;
+        }
+
+        .article-full img {
+            width: 100%;
+            height: auto;
+            border-radius: var(--radius);
+            margin: 1.5rem 0;
+        }
+
+        .article-full .meta {
+            color: var(--muted);
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+        }
+
+        .back-to-blog {
+            display: inline-block;
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+            color: var(--accent);
+            cursor: pointer;
+        }
+
+        /* ------ RESPONSIVE ------ */
+        @media (max-width: 1024px) {
+            .layout-grid {
+                grid-template-columns: 1fr;
+            }
+            .sidebar {
+                position: static;
+            }
+            .article-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 720px) {
+            h1 { font-size: 2rem; }
+            .featured-article h1 { font-size: 1.8rem; }
+            .header-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .main-nav {
+                gap: 1rem;
+                font-size: 0.8rem;
+            }
+            .search-wrap input {
+                width: 120px;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            .newsletter-form {
+                flex-direction: column;
+                align-items: center;
+            }
+            .newsletter-form input {
+                width: 100%;
+            }
+            .featured-article img {
+                height: 240px;
+            }
+        }
+
+        /* Utility */
+        .hidden { display: none !important; }
+        .sr-only {
+            position: absolute;
+            width: 1px; height: 1px;
+            padding: 0; margin: -1px;
+            overflow: hidden;
+            clip: rect(0,0,0,0);
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+    <div class="container header-inner">
+        <a href="#" class="logo" onclick="showBlog(event)">Junction <span>Of</span> Forms</a>
+        <nav class="main-nav">
+            <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="terms.html">Terms Of Privacy</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+					<li><a href="cookies.html">Cookies Policy</a></li> 
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+        </nav>
+        <div class="search-wrap">
+            <input type="text" id="searchInput" placeholder="Search articles..." aria-label="Search articles">
+            <button onclick="performSearch()" aria-label="Search">⌕</button>
+        </div>
+    </div>
+</header>
+
+<!-- ============ MAIN ============ -->
+<main class="site-main">
+    <div class="container">
+
+        <!-- BLOG VIEW -->
+        <div id="blogView">
+            <div class="layout-grid">
+                <div class="main-content">
+
+                    <!-- FEATURED ARTICLE -->
+                    <article class="featured-article">
+                        <div class="meta">Featured · Architecture</div>
+                        <h1><a href="#" onclick="showArticle(event, 'featured')">The Quiet Power of Thresholds: How Transition Spaces Shape the Way We Live</a></h1>
+                        <p class="excerpt">We obsess over living rooms and kitchens, yet the spaces between—entryways, corridors, garden rooms—quietly choreograph daily life. A close look at the architecture of arrival.</p>
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&auto=format&fit=crop&q=80" alt="Minimalist entryway with warm wood flooring and natural light streaming through a tall window">
+                        <div class="read-time">12 min read · By Elena Marchetti</div>
+                    </article>
+
+                    <!-- CATEGORY FILTERS -->
+                    <div class="section-label">Browse by category</div>
+                    <div class="category-filters" id="categoryFilters">
+                        <button class="active" onclick="filterCategory(event, 'all')">All</button>
+                        <button onclick="filterCategory(event, 'interior')">Interior Design</button>
+                        <button onclick="filterCategory(event, 'architecture')">Architecture</button>
+                        <button onclick="filterCategory(event, 'materials')">Materials</button>
+                        <button onclick="filterCategory(event, 'lighting')">Lighting</button>
+                        <button onclick="filterCategory(event, 'spaces')">Space Planning</button>
+                        <button onclick="filterCategory(event, 'furniture')">Furniture</button>
+                    </div>
+
+                    <!-- ARTICLE GRID -->
+                    <div class="article-grid" id="articleGrid">
+
+                        <!-- 1 -->
+                        <article class="article-card" data-category="interior">
+                            <div class="cat">Interior Design</div>
+                            <h3><a href="#" onclick="showArticle(event, 'a1')">The Art of Negative Space: Why Empty Rooms Feel Fuller</a></h3>
+                            <p class="excerpt">In a culture of accumulation, the most radical act may be restraint. How to use emptiness as a design material—without sterility.</p>
+                            <div class="read-time">9 min read</div>
+                        </article>
+
+                        <!-- 2 -->
+                        <article class="article-card" data-category="architecture">
+                            <div class="cat">Architecture</div>
+                            <h3><a href="#" onclick="showArticle(event, 'a2')">Facades That Breathe: A Field Guide to Passive Ventilation</a></h3>
+                            <p class="excerpt">From double-skin glass to perforated brick screens, architects are rediscovering ancient cooling strategies for a warming world.</p>
+                            <div class="read-time">14 min read</div>
+                        </article>
+
+                        <!-- 3 -->
+                        <article class="article-card" data-category="materials">
+                            <div class="cat">Materials</div>
+                            <h3><a href="#" onclick="showArticle(event, 'a3')">Lime, Clay, and Timber: The Return of Breathable Walls</a></h3>
+                            <p class="excerpt">Modern buildings trap moisture. Traditional materials let it move. A practical guide to hygroscopic interiors.</p>
+                            <div class="read-time">11 min read</div>
+                        </article>
+
+                        <!-- 4 -->
+                        <article class="article-card" data-category="lighting">
+                            <div class="cat">Lighting</div>
+                            <h3><a href="#" onclick="showArticle(event, 'a4')">Beyond the Pendant: A Room-by-Room Lighting Strategy</a></h3>
+                            <p class="excerpt">Layered light is the difference between a house and a home. How to plan ambient, task, and accent layers like a designer.</p>
+                            <div class="read-time">10 min read</div>
+                        </article>
+
+                        <!-- 5 -->
+                        <article class="article-card" data-category="spaces">
+                            <div class="cat">Space Planning</div>
+                            <h3><a href="#" onclick="showArticle(event, 'a5')">The 18-Inch Rule: Small Space Planning That Actually Works</a></h3>
+                            <p class="excerpt">Circulation, not square footage, determines how a room feels. A precise guide to clearances, zones, and the geometry of comfort.</p>
+                            <div class="read-time">8 min read</div>
+                        </article>
+
+                        <!-- 6 -->
+                        <article class="article-card" data-category="furniture">
+                            <div class="cat">Furniture</div>
+                            <h3><a href="#" onclick="showArticle(event, 'a6')">The Case for Fewer, Better Pieces</a></h3>
+                            <p class="excerpt">Fast furniture is filling landfills. How to build a home slowly—with pieces that age gracefully and serve for decades.</p>
+                            <div class="read-time">7 min read</div>
+                        </article>
+
+                    </div>
+
+                    <!-- FAQ -->
+                    <section class="faq-section">
+                        <div class="section-label">Common questions</div>
+                        <h2>Design & Architecture FAQ</h2>
+                        <div id="faqContainer">
+                            <div class="faq-item">
+                                <div class="faq-question" onclick="toggleFaq(this)">How do I start planning a renovation?</div>
+                                <div class="faq-answer">Begin with a detailed brief: how you live, what frustrates you, and what you refuse to compromise. Measure everything. Then prioritise structure, light, and flow before finishes. A good designer will spend more time on questions than answers in the first meeting.</div>
+                            </div>
+                            <div class="faq-item">
+                                <div class="faq-question" onclick="toggleFaq(this)">What is the most overlooked aspect of interior design?</div>
+                                <div class="faq-answer">Lighting—specifically the quality and direction of both natural and artificial light. Most people choose fixtures before understanding how light will behave in a room. We recommend planning light as an architectural element, not an afterthought.</div>
+                            </div>
+                            <div class="faq-item">
+                                <div class="faq-question" onclick="toggleFaq(this)">Are sustainable materials worth the cost?</div>
+                                <div class="faq-answer">Often, yes—especially when you factor in health and longevity. Breathable paints, solid timber, and natural fibres often outlast their cheaper counterparts. The upfront premium is frequently offset by lower replacement and healthcare costs.</div>
+                            </div>
+                            <div class="faq-item">
+                                <div class="faq-question" onclick="toggleFaq(this)">How do I make a small room feel larger?</div>
+                                <div class="faq-answer">Prioritise sightlines. Keep furniture low, use consistent flooring, and let light travel. Mirrors help, but nothing beats removing unnecessary partitions. Sometimes the best move is to eliminate a door entirely.</div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- NEWSLETTER -->
+                    <section class="newsletter-section">
+                        <h3>The Junction Letter</h3>
+                        <p>One thoughtful essay on design and architecture, delivered every other Sunday. No spam, no product pushes.</p>
+                        <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+                            <input type="email" placeholder="Your email address" required aria-label="Email address">
+                            <button type="submit">Subscribe</button>
+                        </form>
+                    </section>
+
+                </div>
+
+                <!-- SIDEBAR -->
+                <aside class="sidebar">
+                    <div class="sidebar-widget">
+                        <h4>About the Editor</h4>
+                        <div class="author">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&auto=format&fit=crop&q=80" alt="Portrait of Elena Marchetti, editor-in-chief">
+                            <div>
+                                <p><strong>Elena Marchetti</strong></p>
+                                <p style="font-size:0.8rem;color:var(--muted);">Architect & writer. 15 years in practice.</p>
+                            </div>
+                        </div>
+                        <p style="font-size:0.9rem;">Junction Of Forms is an independent journal exploring the spaces we inhabit—and the ideas that shape them.</p>
+                    </div>
+
+                    <div class="sidebar-widget">
+                        <h4>Popular This Month</h4>
+                        <ul>
+                            <li><a href="#" onclick="showArticle(event, 'a2')">Facades That Breathe</a></li>
+                            <li><a href="#" onclick="showArticle(event, 'a4')">Beyond the Pendant</a></li>
+                            <li><a href="#" onclick="showArticle(event, 'a5')">The 18-Inch Rule</a></li>
+                            <li><a href="#" onclick="showArticle(event, 'a1')">The Art of Negative Space</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-widget">
+                        <h4>Categories</h4>
+                        <ul>
+                            <li><a href="#" onclick="filterCategory(event, 'interior')">Interior Design</a></li>
+                            <li><a href="#" onclick="filterCategory(event, 'architecture')">Architecture</a></li>
+                            <li><a href="#" onclick="filterCategory(event, 'materials')">Materials</a></li>
+                            <li><a href="#" onclick="filterCategory(event, 'lighting')">Lighting</a></li>
+                            <li><a href="#" onclick="filterCategory(event, 'spaces')">Space Planning</a></li>
+                            <li><a href="#" onclick="filterCategory(event, 'furniture')">Furniture</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-widget">
+                        <h4>From the Archive</h4>
+                        <ul>
+                            <li><a href="#" onclick="showArticle(event, 'a3')">Lime, Clay, and Timber</a></li>
+                            <li><a href="#" onclick="showArticle(event, 'a6')">The Case for Fewer, Better Pieces</a></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+
+        <!-- ARTICLE FULL VIEW -->
+        <div id="articleView" class="article-full">
+            <span class="back-to-blog" onclick="showBlog(event)">← Back to all articles</span>
+            <div id="articleContent"></div>
+        </div>
+
+    </div>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <h5>Junction Of Forms</h5>
+                <p style="font-size:0.9rem;color:var(--muted);max-width:300px;">An independent publication about interior design, architecture, and the art of living well. Published from London & Milan.</p>
+            </div>
+            <div>
+                <h5>Explore</h5>
+                <ul>
+                    <li><a href="#" onclick="filterCategory(event, 'interior')">Interior Design</a></li>
+                    <li><a href="#" onclick="filterCategory(event, 'architecture')">Architecture</a></li>
+                    <li><a href="#" onclick="filterCategory(event, 'materials')">Materials</a></li>
+                    <li><a href="#" onclick="filterCategory(event, 'lighting')">Lighting</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5>Information</h5>
+                <ul>
+                    <li><a href="#" onclick="showAbout(event)">About</a></li>
+                    <li><a href="#" onclick="showContact(event)">Contact</a></li>
+                    <li><a href="#" onclick="showPrivacy(event)">Privacy</a></li>
+                    <li><a href="#" onclick="showTerms(event)">Terms</a></li>
+                    <li><a href="#" onclick="showCookies(event)">Cookies</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5>Follow</h5>
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Pinterest</a></li>
+                    <li><a href="#">Substack</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2025 Junction Of Forms. All rights reserved.</span>
+            <span>Made with restraint.</span>
+        </div>
+    </div>
+</footer>
+
+<!-- ============ SCRIPTS ============ -->
+<script>
+    // ---------- ARTICLE DATABASE ----------
+    const articles = {
+        featured: {
+            title: 'The Quiet Power of Thresholds: How Transition Spaces Shape the Way We Live',
+            category: 'Architecture',
+            author: 'Elena Marchetti',
+            readTime: '12 min read',
+            content: `
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&auto=format&fit=crop&q=80" alt="Minimalist entryway with warm wood flooring and natural light">
+                <div class="meta">Featured · Architecture · 12 min read</div>
+                <p>We spend our lives in rooms, but we live in the spaces between them. The threshold—that liminal zone where one environment yields to another—is the most under-celebrated element of architecture. It is also the most quietly powerful.</p>
+                <h2>The psychology of arrival</h2>
+                <p>Think of the last time you entered a home that felt immediately calming. Chances are, the entryway did something specific: it compressed, then released. It slowed you down. It gave your eyes a moment to adjust. This is not accidental. Throughout history, architects have used compression and expansion—low ceilings transitioning to high, dark to light—to choreograph emotional states.</p>
+                <p>Japanese architecture formalises this with the <em>genkan</em>, a sunken entryway that marks the boundary between outside and inside, public and private. In traditional English cottages, a narrow hall opens suddenly into a warm, low-ceilinged sitting room. The threshold is a psychological decompression chamber.</p>
+                <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&auto=format&fit=crop&q=80" alt="Sunlit corridor with concrete walls and a wooden bench">
+                <h2>Circulation as choreography</h2>
+                <p>Modern open-plan living has largely erased these transitions—often to our detriment. When the kitchen, dining, and living areas merge into one undifferentiated volume, we lose the subtle cues that signal a change in activity. The result can feel efficient but also flat, like a single long sentence without punctuation.</p>
+                <p>The remedy is not to return to closed rooms, but to reintroduce thresholds: a change in floor level, a soffit, a material shift, a framed opening. These gestures cost little but do enormous work. They give the eye a place to rest and the body a moment to prepare.</p>
+                <h3>Three practical thresholds</h3>
+                <p><strong>1. The entry compression.</strong> A lower ceiling at the front door that lifts as you move inward creates a sense of release. This can be achieved with a dropped bulkhead or simply by painting the ceiling a darker tone.</p>
+                <p><strong>2. The corridor pause.</strong> In larger homes, a corridor should not be a tunnel but a series of framed views. Align doors, windows, or artwork to create axial sightlines that draw you forward.</p>
+                <p><strong>3. The garden room.</strong> The transition to outdoors is often abrupt. A covered porch, a deep roof overhang, or even a change in paving material can soften the boundary between inside and out.</p>
+                <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=1200&auto=format&fit=crop&q=80" alt="Covered outdoor terrace with stone flooring and a view to a garden">
+                <h2>Thresholds and privacy</h2>
+                <p>In an age of open-plan living and glass walls, thresholds also serve a social function. They allow us to modulate privacy without walls. A change in level, a screen, or a turn in the plan can signal that a space is more intimate, more formal, or more private—without ever closing a door.</p>
+                <p>This is particularly valuable in family homes, where different activities coexist. A child doing homework at the kitchen table should not be isolated, but neither should they be exposed to the full volume of adult conversation. A threshold—a half-wall, a change in floor finish, a shelving unit—can create acoustic and visual separation while maintaining connection.</p>
+                <h2>Learning from the past</h2>
+                <p>Traditional architecture is rich with threshold strategies that we have too often abandoned. The courtyard house, the dogtrot cabin, the shop-house with its interior light well—all use transition zones to manage climate, privacy, and social life. As we grapple with smaller footprints and greater environmental pressures, these ancient solutions offer fresh relevance.</p>
+                <p>The threshold is not a luxury. It is a fundamental instrument of spatial experience. By designing it with care, we can make our homes feel larger, calmer, and more deeply livable—one transition at a time.</p>
+            `
+        },
+        a1: {
+            title: 'The Art of Negative Space: Why Empty Rooms Feel Fuller',
+            category: 'Interior Design',
+            author: 'Elena Marchetti',
+            readTime: '9 min read',
+            content: `
+                <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1200&auto=format&fit=crop&q=80" alt="Minimalist living room with a single armchair and a large window">
+                <div class="meta">Interior Design · 9 min read</div>
+                <p>We are conditioned to fill. Empty walls feel unfinished; bare corners feel neglected. But in design, as in music, the spaces between the notes are as important as the notes themselves.</p>
+                <h2>Negative space as material</h2>
+                <p>Negative space is not the absence of design—it is design. It is the deliberate use of emptiness to give weight to objects, to allow light to travel, and to give the eye a place to rest. In Japanese aesthetics, this is <em>ma</em>: the interval, the pause, the meaningful gap.</p>
+                <p>When a room is overfilled, every object competes for attention. The result is visual noise. When a room has generous negative space, a single chair, a painting, a vase of branches—these become events. They are seen.</p>
+                <h2>The courage to leave empty</h2>
+                <p>Designing with negative space requires confidence. It means resisting the urge to fill a blank wall simply because it is blank. It means choosing one beautiful object over five mediocre ones. It means allowing a room to breathe.</p>
+                <p>This is not minimalism for its own sake. It is about intentionality. Every object in a room should earn its place—not just functionally, but visually and emotionally. If it doesn't, it is clutter, regardless of its price.</p>
+                <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1200&auto=format&fit=crop&q=80" alt="Sculptural floor lamp in an empty corner with a textured wall">
+                <h2>Practical strategies</h2>
+                <p><strong>1. The one-in-one-out rule.</strong> For every new object you bring into a room, remove one. This keeps accumulation in check and forces choices.</p>
+                <p><strong>2. Leave one wall bare.</strong> Not every wall needs art. A bare wall can be a canvas for shadow and light.</p>
+                <p><strong>3. Group, don't scatter.</strong> Instead of distributing objects evenly, create a few deliberate clusters. The empty space around them amplifies their presence.</p>
+                <p><strong>4. Consider the floor.</strong> Furniture legs create visual space. Pieces that sit heavily on the floor can make a room feel grounded, but too many can feel cluttered.</p>
+                <h2>The emotional effect</h2>
+                <p>Rooms with generous negative space feel calm. They lower the heart rate. They allow thought. In a world of constant stimulation, this is not a luxury but a necessity. The empty room is not empty—it is full of possibility.</p>
+            `
+        },
+        a2: {
+            title: 'Facades That Breathe: A Field Guide to Passive Ventilation',
+            category: 'Architecture',
+            author: 'James Okonkwo',
+            readTime: '14 min read',
+            content: `
+                <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=1200&auto=format&fit=crop&q=80" alt="Modern building facade with perforated brick screen and greenery">
+                <div class="meta">Architecture · 14 min read</div>
+                <p>Before air conditioning, buildings breathed. They were designed to catch breezes, to exhaust hot air, to stay cool without a single kilowatt of electricity. As the climate warms and energy costs rise, architects are rediscovering these ancient strategies—and inventing new ones.</p>
+                <h2>The physics of natural ventilation</h2>
+                <p>Natural ventilation relies on two forces: wind and buoyancy. Wind-driven ventilation uses pressure differences around a building to push air through. Buoyancy-driven (stack) ventilation uses the fact that warm air rises, drawing cool air in at low levels and exhausting hot air at high levels.</p>
+                <p>The most effective designs combine both. A narrow floor plate, operable windows on multiple sides, and a central atrium or stairwell can create a stack effect that ventilates an entire building without mechanical assistance.</p>
+                <h2>Double-skin facades</h2>
+                <p>The double-skin facade—a glass outer layer separated from an inner layer by an air cavity—is one of the most sophisticated passive ventilation strategies. The cavity acts as a thermal buffer in winter and a chimney in summer. Solar gain is captured and either used or exhausted, depending on the season.</p>
+                <p>These facades are expensive, but they offer exceptional performance in extreme climates. For residential projects, simpler strategies are often more appropriate.</p>
+                <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1200&auto=format&fit=crop&q=80" alt="Interior courtyard with a water feature and natural ventilation openings">
+                <h2>Perforated screens and brise-soleil</h2>
+                <p>In hot climates, the challenge is not just ventilation but solar control. Perforated screens—whether in brick, terracotta, timber, or metal—filter light and air while blocking direct sun. They create a dappled, ever-changing interior light that is far more pleasant than the harsh glare of unprotected glass.</p>
+                <p>Traditional <em>mashrabiya</em> screens in the Middle East are the classic example, but contemporary architects have adapted the principle to everything from social housing to luxury villas. The screen becomes both a functional device and a decorative element.</p>
+                <h2>Operable windows and user control</h2>
+                <p>No matter how clever the design, passive ventilation only works if occupants can operate it. This sounds obvious, but many modern buildings have windows that are sealed shut for safety or acoustic reasons. The result is a building that depends entirely on mechanical systems—fragile, energy-intensive, and disconnected from the outdoors.</p>
+                <p>Designing for user control means providing windows that are easy to reach and operate, with clear feedback about whether they are open or closed. It means designing for cross-ventilation, not just single-sided openings. It means trusting occupants to manage their own comfort.</p>
+                <h2>The future of breathing buildings</h2>
+                <p>As we face a future of hotter summers and more volatile weather, passive ventilation is not a nostalgic throwback—it is a necessity. The buildings that will survive and thrive are those that work with climate, not against it. They breathe.</p>
+            `
+        },
+        a3: {
+            title: 'Lime, Clay, and Timber: The Return of Breathable Walls',
+            category: 'Materials',
+            author: 'Sofia Lindqvist',
+            readTime: '11 min read',
+            content: `
+                <img src="https://images.unsplash.com/photo-1615529182904-14819c35db37?w=1200&auto=format&fit=crop&q=80" alt="Textured clay plaster wall with a wooden shelf and ceramic vase">
+                <div class="meta">Materials · 11 min read</div>
+                <p>Modern buildings are sealed. They are wrapped in plastic, painted with acrylic, and insulated with foam. They are airtight, energy-efficient, and—too often—unhealthy. The materials that built our ancestors' homes allowed moisture to move. They breathed.</p>
+                <h2>The problem with impermeable walls</h2>
+                <p>When a wall cannot breathe, moisture from cooking, washing, and simply being human has nowhere to go. It condenses on cold surfaces, feeds mold, and degrades indoor air quality. The rise of asthma and allergies in developed countries is at least partly attributable to the way we build.</p>
+                <p>Breathable materials—lime plaster, clay paint, solid timber, wool insulation—allow water vapor to pass through the building envelope. They buffer humidity, absorbing moisture when the air is damp and releasing it when dry. The result is a more stable, more comfortable, and healthier indoor environment.</p>
+                <h2>Lime: the ancient binder</h2>
+                <p>Lime has been used as a binder for millennia. Unlike Portland cement, which is fired at very high temperatures and produces a hard, impermeable material, lime is fired at lower temperatures and cures by absorbing carbon dioxide from the air. It is softer, more flexible, and—crucially—vapor-permeable.</p>
+                <p>Lime plaster and limewash are ideal for old buildings, where trapping moisture can cause serious structural damage. But they are also increasingly used in new builds, where their breathability and low embodied carbon are valued.</p>
+                <h2>Clay: the everyday material</h2>
+                <p>Clay is one of the oldest building materials on earth—and one of the most sophisticated. Clay plaster regulates humidity, absorbs odors, and is naturally fire-resistant. It is also remarkably beautiful, with a depth and warmth that no paint can replicate.</p>
+                <p>In Germany and Austria, clay plaster is a standard interior finish. In the English-speaking world, it is still niche—but growing fast. The raw material is abundant, non-toxic, and can be locally sourced in many regions.</p>
+                <img src="https://images.unsplash.com/photo-1604014237800-1c9102c219da?w=1200&auto=format&fit=crop&q=80" alt="Timber-framed interior with exposed beams and natural insulation">
+                <h2>Timber: structure and finish</h2>
+                <p>Solid timber—as structure, as cladding, as flooring—is the ultimate breathable material. It is hygroscopic, meaning it absorbs and releases moisture depending on the ambient humidity. It is also a carbon sink, storing CO2 for the life of the building.</p>
+                <p>The key is to use timber without sealing it. Oiled and waxed finishes allow the wood to breathe; polyurethane and lacquer do not. For floors, hard wax oil is an excellent choice. For walls, untreated or limewashed timber boards create a warm, natural surface that ages gracefully.</p>
+                <h2>Building for health</h2>
+                <p>The return to breathable materials is not nostalgia. It is a rational response to the twin crises of climate change and chronic health problems linked to indoor air quality. By choosing materials that work with natural processes rather than against them, we can build homes that are not just more sustainable, but more genuinely comfortable.</p>
+            `
+        },
+        a4: {
+            title: 'Beyond the Pendant: A Room-by-Room Lighting Strategy',
+            category: 'Lighting',
+            author: 'Elena Marchetti',
+            readTime: '10 min read',
+            content: `
+                <img src="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=1200&auto=format&fit=crop&q=80" alt="Warm layered lighting in a living room with table lamps and wall sconces">
+                <div class="meta">Lighting · 10 min read</div>
+                <p>Most people choose light fixtures the way they choose jewelry: as decorative objects, selected at the end of a project. This is backwards. Light is the primary material of interior design. It determines how every other material appears, how a room feels, and how well it functions.</p>
+                <h2>The three layers of light</h2>
+                <p>Professional lighting design uses three layers: ambient, task, and accent. Most homes have only ambient—a single ceiling fixture that illuminates everything and nothing.</p>
+                <p><strong>Ambient light</strong> provides overall illumination. It should be soft and indirect, ideally bounced off ceilings or walls. Pendants and chandeliers are ambient fixtures, but they are rarely sufficient on their own.</p>
+                <p><strong>Task light</strong> is directed where you need it: over a kitchen counter, beside a reading chair, above a desk. Task lighting should be adjustable and positioned to avoid glare.</p>
+                <p><strong>Accent light</strong> creates drama. It highlights artwork, architectural features, or plants. It is the layer that gives a room depth and atmosphere.</p>
+                <h2>Room by room</h2>
+                <h3>Living room</h3>
+                <p>Start with ambient light from a ceiling fixture or, better, from multiple sources: a floor lamp in one corner, a table lamp on a sideboard, wall sconces flanking a sofa. Add task light for reading—an adjustable floor lamp or a swing-arm wall light. Use accent light to wash a textured wall or illuminate a bookshelf.</p>
+                <h3>Kitchen</h3>
+                <p>Ambient light from ceiling recessed fixtures is fine, but the real work happens at counters. Under-cabinet task lighting is essential. Pendant lights over an island provide both ambient and task light, but they should be positioned to avoid shadows on the work surface.</p>
+                <h3>Bedroom</h3>
+                <p>Bedroom lighting should be layered and controllable. Wall sconces beside the bed provide task light for reading without cluttering nightstands. A dimmable ambient source—perhaps a pendant or a pair of table lamps—creates a soft glow. Avoid overhead lights directly above the bed.</p>
+                <h3>Bathroom</h3>
+                <p>Task lighting is critical here, especially around mirrors. Sconces mounted at eye level, on both sides of the mirror, provide even, flattering light for grooming. Avoid downlights directly above the mirror, which cast shadows on the face.</p>
+                <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=1200&auto=format&fit=crop&q=80" alt="Bathroom vanity with wall sconces and a large mirror">
+                <h2>Color temperature and dimming</h2>
+                <p>Warm light (2700K–3000K) is generally best for living spaces. Cooler light (4000K) is suitable for task areas but can feel clinical in a home. Dimmers are essential—not just for mood, but for energy savings and flexibility.</p>
+                <p>The best lighting strategy is one you never notice. It simply makes everything look and feel right.</p>
+            `
+        },
+        a5: {
+            title: 'The 18-Inch Rule: Small Space Planning That Actually Works',
+            category: 'Space Planning',
+            author: 'James Okonkwo',
+            readTime: '8 min read',
+            content: `
+                <img src="https://images.unsplash.com/photo-1554995207-c18c203602cb?w=1200&auto=format&fit=crop&q=80" alt="Compact living space with a wall-mounted desk and clever storage">
+                <div class="meta">Space Planning · 8 min read</div>
+                <p>Small spaces fail not because they are small, but because they are planned poorly. The difference between a cramped room and a comfortable one often comes down to a few inches—and the discipline to respect them.</p>
+                <h2>The magic number</h2>
+                <p>Eighteen inches (45 cm) is the minimum comfortable circulation width for a single person. For two people to pass, you need at least 36 inches (90 cm). These are not arbitrary figures; they derive from the average human body and the way we move.</p>
+                <p>In small spaces, every inch of circulation is precious. Furniture placed too close to a doorway, a table pushed against a wall, a sofa that blocks the path to a window—these are the mistakes that make a room feel tight.</p>
+                <h2>Zoning without walls</h2>
+                <p>In a studio apartment or open-plan living area, the key is to create distinct zones without physical partitions. A change in flooring, a rug, a ceiling drop, or a piece of furniture used as a divider can all signal a transition from one activity to another.</p>
+                <p>The most effective dividers are those that are open and transparent. A shelving unit with open backs, a low console, a row of plants—these create separation without blocking light or sightlines.</p>
+                <h2>Furniture that does double duty</h2>
+                <p>In small spaces, every piece of furniture should earn its footprint. A sofa bed, a storage ottoman, a dining table that folds down from the wall—these are not compromises; they are intelligent design.</p>
+                <p>But beware of furniture that tries to do too much. A sofa bed that is uncomfortable as both a sofa and a bed is a failure. Choose pieces that perform their primary function well, and accept that some compromises are inevitable.</p>
+                <h2>Vertical space</h2>
+                <p>When you cannot expand outward, expand upward. Floor-to-ceiling shelving, wall-mounted desks, high-level storage—these free up floor area and draw the eye upward, making the room feel taller.</p>
+                <p>But vertical storage must be accessible. A shelf you cannot reach is useless. Invest in a sturdy step stool and use the highest shelves for infrequently used items.</p>
+                <h2>The discipline of less</h2>
+                <p>Ultimately, small-space living is about editing. Every object you bring into a small home takes up space that could be used for living. The most successful small spaces are those where the occupants have made peace with less—and discovered that less can be more.</p>
+            `
+        },
+        a6: {
+            title: 'The Case for Fewer, Better Pieces',
+            category: 'Furniture',
+            author: 'Sofia Lindqvist',
+            readTime: '7 min read',
+            content: `
+                <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1200&auto=format&fit=crop&q=80" alt="Well-crafted wooden chair with visible joinery in a minimal room">
+                <div class="meta">Furniture · 7 min read</div>
+                <p>The average household in the developed world contains over 300,000 objects. Many of them are furniture—and much of it is disposable. Flat-pack shelves, particleboard desks, sofas designed to last a few years. We are drowning in stuff, and our homes feel heavier for it.</p>
+                <h2>The true cost of fast furniture</h2>
+                <p>Fast furniture is cheap for a reason. It is made from low-grade materials, assembled with glue and staples, and designed to be replaced rather than repaired. When it breaks—and it will—it goes to landfill. Globally, furniture waste is a growing environmental problem.</p>
+                <p>But the cost is not just environmental. It is also aesthetic and emotional. A room filled with disposable furniture feels temporary, unsettled. It never quite becomes home.</p>
+                <h2>What makes a piece worth keeping</h2>
+                <p>A well-made piece of furniture has several qualities. It is made from solid materials—timber, metal, glass—not veneer over particleboard. It is assembled with joinery, not just glue. It is designed to be repaired, with replaceable parts and accessible fixings.</p>
+                <p>It also has a timeless quality. It does not follow trends so slavishly that it looks dated in five years. It may be contemporary or traditional, but it is confident in its own identity.</p>
+                <h2>Building slowly</h2>
+                <p>The alternative to fast furniture is not necessarily expensive furniture. It is slow furniture—pieces acquired gradually, with care, over years. A young household might start with a good bed and a sturdy dining table. Later, they add a comfortable sofa, a well-made armchair, a beautiful rug.</p>
+                <p>This approach requires patience. It means living with empty spaces for a while. It means resisting the urge to fill a room all at once. But the result is a home that feels curated rather than consumed—a home that reflects the lives of its occupants.</p>
+                <h2>Repair and restoration</h2>
+                <p>Part of the slow furniture ethos is learning to repair. A wobbly chair can be fixed. A scratched table can be refinished. A sagging sofa can be reupholstered. These skills were once common; today they are rare, but they are worth recovering.</p>
+                <p>When you repair a piece of furniture, you develop a relationship with it. It becomes more than an object; it becomes a part of your story.</p>
+            `
+        }
+    };
+
+    // ---------- STATE ----------
+    let currentCategory = 'all';
+    let currentSearch = '';
+
+    // ---------- DOM ----------
+    const blogView = document.getElementById('blogView');
+    const articleView = document.getElementById('articleView');
+    const articleContent = document.getElementById('articleContent');
+    const articleGrid = document.getElementById('articleGrid');
+    const searchInput = document.getElementById('searchInput');
+
+    // ---------- FUNCTIONS ----------
+
+    function showBlog(e) {
+        if (e) e.preventDefault();
+        articleView.classList.remove('active');
+        blogView.style.display = 'block';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function showArticle(e, id) {
+        if (e) e.preventDefault();
+        const article = articles[id];
+        if (!article) return;
+        articleContent.innerHTML = article.content;
+        blogView.style.display = 'none';
+        articleView.classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function filterCategory(e, category) {
+        if (e) e.preventDefault();
+        currentCategory = category;
+        // Update active button
+        document.querySelectorAll('.category-filters button').forEach(btn => {
+            btn.classList.remove('active');
+        });
+        if (e && e.target) {
+            e.target.classList.add('active');
+        } else {
+            // If called from nav, find matching button
+            document.querySelectorAll('.category-filters button').forEach(btn => {
+                if (btn.textContent.toLowerCase().includes(category) || (category === 'all' && btn.textContent === 'All')) {
+                    btn.classList.add('active');
+                }
+            });
+        }
+        // Show blog view
+        showBlog();
+        applyFilters();
+    }
+
+    function performSearch() {
+        currentSearch = searchInput.value.trim().toLowerCase();
+        showBlog();
+        applyFilters();
+    }
+
+    function applyFilters() {
+        const cards = document.querySelectorAll('.article-card');
+        let visibleCount = 0;
+
+        cards.forEach(card => {
+            const cat = card.dataset.category || '';
+            const title = card.querySelector('h3')?.textContent.toLowerCase() || '';
+            const excerpt = card.querySelector('.excerpt')?.textContent.toLowerCase() || '';
+            const catLabel = card.querySelector('.cat')?.textContent.toLowerCase() || '';
+
+            const matchesCategory = currentCategory === 'all' || cat === currentCategory;
+            const matchesSearch = currentSearch === '' ||
+                title.includes(currentSearch) ||
+                excerpt.includes(currentSearch) ||
+                catLabel.includes(currentSearch);
+
+            if (matchesCategory && matchesSearch) {
+                card.style.display = 'block';
+                visibleCount++;
+            } else {
+                card.style.display = 'none';
+            }
+        });
+
+        // Show featured only when no filters active
+        const featured = document.querySelector('.featured-article');
+        if (featured) {
+            if (currentCategory === 'all' && currentSearch === '') {
+                featured.style.display = 'block';
+            } else {
+                featured.style.display = 'none';
+            }
+        }
+
+        // Show "no results" message if needed
+        let noResults = document.getElementById('noResults');
+        if (!noResults) {
+            noResults = document.createElement('p');
+            noResults.id = 'noResults';
+            noResults.style.textAlign = 'center';
+            noResults.style.padding = '3rem 0';
+            noResults.style.color = 'var(--muted)';
+            noResults.textContent = 'No articles found. Try a different search or category.';
+            articleGrid.parentNode.insertBefore(noResults, articleGrid.nextSibling);
+        }
+        noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+    }
+
+    // Search on Enter
+    searchInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') {
+            performSearch();
+        }
+    });
+
+    // FAQ toggle
+    function toggleFaq(el) {
+        const item = el.parentElement;
+        item.classList.toggle('open');
+    }
+
+    // Newsletter
+    function subscribeNewsletter(e) {
+        e.preventDefault();
+        const form = e.target;
+        const input = form.querySelector('input');
+        const email = input.value.trim();
+        if (email) {
+            alert('Thank you for subscribing to The Junction Letter. Please check your inbox to confirm.');
+            input.value = '';
+        }
+    }
+
+    // Static pages (simple alerts for demo)
+    function showAbout(e) {
+        e.preventDefault();
+        alert('Junction Of Forms is an independent journal about interior design, architecture, and the art of living well. Founded in 2021 by Elena Marchetti and James Okonkwo.');
+    }
+
+    function showContact(e) {
+        e.preventDefault();
+        alert('Contact us at: editorial@junctionofforms.com');
+    }
+
+    function showPrivacy(e) {
+        e.preventDefault();
+        alert('We respect your privacy. We do not sell or share your data. Read our full privacy policy at junctionofforms.com/privacy.');
+    }
+
+    function showTerms(e) {
+        e.preventDefault();
+        alert('Terms of use: All content is copyright Junction Of Forms. You may quote with attribution.');
+    }
+
+    function showCookies(e) {
+        e.preventDefault();
+        alert('We use minimal cookies for analytics. You can disable them in your browser settings.');
+    }
+
+    // Initialize
+    applyFilters();
+</script>
+
+<!-- Schema Markup -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Junction Of Forms",
+    "description": "An independent publication about interior design, architecture, and the art of living well.",
+    "url": "https://www.junctionofforms.com/",
+    "author": {
+        "@type": "Person",
+        "name": "Elena Marchetti"
+    }
+}
+</script>
+
+</body>
+</html>

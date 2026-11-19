@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact — Junction Of Forms</title>
+    <meta name="description" content="Get in touch with the editorial team at Junction Of Forms. Story pitches, feedback, and general inquiries.">
+    <link rel="canonical" href="https://www.junctionofforms.com/contact.html">
+    <meta property="og:title" content="Contact — Junction Of Forms">
+    <meta property="og:description" content="Reach the editorial team. We welcome thoughtful pitches and conversations about design and architecture.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1200">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <style>
+        /* ------ RESET & BASE ------ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #fbf9f6;
+            --surface: #ffffff;
+            --ink: #1e1e1e;
+            --ink-soft: #3d3d3d;
+            --muted: #6b6b6b;
+            --border: #e2ddd6;
+            --accent: #a67c52;
+            --accent-soft: #f2ede7;
+            --serif: 'Georgia', 'Times New Roman', Times, serif;
+            --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            --radius: 4px;
+            --maxw: 1280px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--ink);
+            font-family: var(--sans);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            font-size: 16px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            color: var(--ink);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--accent);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: var(--serif);
+            font-weight: 400;
+            line-height: 1.25;
+            letter-spacing: -0.01em;
+        }
+
+        h1 { font-size: 2.6rem; }
+        h2 { font-size: 1.9rem; margin-bottom: 0.75rem; }
+        h3 { font-size: 1.35rem; margin-bottom: 0.5rem; }
+        h4 { font-size: 1.1rem; }
+
+        p {
+            margin-bottom: 1.25rem;
+            color: var(--ink-soft);
+        }
+
+        .container {
+            max-width: var(--maxw);
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* ------ HEADER (consistent with main) ------ */
+        .site-header {
+            border-bottom: 1px solid var(--border);
+            background: var(--bg);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.25rem 0;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .logo {
+            font-family: var(--serif);
+            font-size: 1.6rem;
+            letter-spacing: -0.02em;
+            white-space: nowrap;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .main-nav {
+            display: flex;
+            gap: 1.75rem;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            flex-wrap: wrap;
+        }
+
+        .main-nav a {
+            color: var(--ink-soft);
+        }
+
+        .main-nav a:hover {
+            color: var(--accent);
+        }
+
+        .search-wrap {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 0.35rem 0.75rem;
+            background: var(--surface);
+        }
+
+        .search-wrap input {
+            border: none;
+            background: transparent;
+            font-family: var(--sans);
+            font-size: 0.9rem;
+            outline: none;
+            width: 160px;
+            color: var(--ink);
+        }
+
+        .search-wrap input::placeholder {
+            color: #aaa;
+        }
+
+        .search-wrap button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            color: var(--muted);
+        }
+
+        /* ------ MAIN / CONTACT LAYOUT ------ */
+        .site-main {
+            padding: 3rem 0 5rem;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 380px;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .contact-intro h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1.25rem;
+            line-height: 1.15;
+        }
+
+        .contact-intro .lead {
+            font-size: 1.2rem;
+            color: var(--muted);
+            max-width: 620px;
+            margin-bottom: 2rem;
+        }
+
+        .contact-form {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 2.5rem;
+            margin-top: 1rem;
+        }
+
+        .contact-form .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.25rem;
+        }
+
+        .contact-form .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        .contact-form label {
+            display: block;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--muted);
+            margin-bottom: 0.4rem;
+        }
+
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form select {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            font-family: var(--sans);
+            font-size: 0.95rem;
+            background: var(--bg);
+            outline: none;
+            transition: border-color 0.2s;
+            color: var(--ink);
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus,
+        .contact-form select:focus {
+            border-color: var(--accent);
+        }
+
+        .contact-form textarea {
+            min-height: 160px;
+            resize: vertical;
+        }
+
+        .contact-form button {
+            padding: 0.85rem 2rem;
+            background: var(--ink);
+            color: #fff;
+            border: none;
+            border-radius: var(--radius);
+            font-family: var(--sans);
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .contact-form button:hover {
+            background: var(--accent);
+        }
+
+        .contact-note {
+            font-size: 0.85rem;
+            color: var(--muted);
+            margin-top: 1rem;
+        }
+
+        /* ------ SIDEBAR (contact details) ------ */
+        .contact-sidebar {
+            position: sticky;
+            top: 100px;
+        }
+
+        .contact-widget {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.75rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-widget h4 {
+            font-family: var(--sans);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--muted);
+            margin-bottom: 1.25rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .contact-widget p {
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-widget .detail-row {
+            display: flex;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+            align-items: flex-start;
+        }
+
+        .contact-widget .detail-row .icon {
+            font-size: 1.1rem;
+            color: var(--accent);
+            width: 1.5rem;
+            flex-shrink: 0;
+            text-align: center;
+        }
+
+        .contact-widget .detail-row .text {
+            font-size: 0.95rem;
+            color: var(--ink-soft);
+        }
+
+        .contact-widget .detail-row .text strong {
+            display: block;
+            font-weight: 600;
+            color: var(--ink);
+            margin-bottom: 0.1rem;
+        }
+
+        .contact-widget .author-card {
+            display: flex;
+            gap: 0.75rem;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-widget .author-card img {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .contact-widget .author-card p {
+            font-size: 0.85rem;
+            margin-bottom: 0.1rem;
+        }
+
+        .contact-widget ul {
+            list-style: none;
+        }
+
+        .contact-widget li {
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .contact-widget li a {
+            color: var(--ink-soft);
+        }
+
+        .contact-widget li a:hover {
+            color: var(--accent);
+        }
+
+        /* ------ FAQ (reused style) ------ */
+        .faq-section {
+            margin: 3.5rem 0 0;
+            border-top: 1px solid var(--border);
+            padding-top: 2.5rem;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border);
+            padding: 1.25rem 0;
+        }
+
+        .faq-question {
+            font-family: var(--serif);
+            font-size: 1.15rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.4rem;
+            color: var(--accent);
+            transition: transform 0.2s;
+        }
+
+        .faq-item.open .faq-question::after {
+            content: '−';
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding-top: 0;
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        .faq-item.open .faq-answer {
+            max-height: 400px;
+            padding-top: 0.75rem;
+        }
+
+        /* ------ FOOTER (consistent) ------ */
+        .site-footer {
+            border-top: 1px solid var(--border);
+            padding: 3.5rem 0 2rem;
+            background: var(--surface);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-grid h5 {
+            font-family: var(--sans);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--muted);
+            margin-bottom: 1rem;
+        }
+
+        .footer-grid ul {
+            list-style: none;
+        }
+
+        .footer-grid li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-grid a {
+            font-size: 0.9rem;
+            color: var(--ink-soft);
+        }
+
+        .footer-grid a:hover {
+            color: var(--accent);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--border);
+            padding-top: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: var(--muted);
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        /* ------ RESPONSIVE ------ */
+        @media (max-width: 1024px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+            .contact-sidebar {
+                position: static;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 720px) {
+            h1 { font-size: 2rem; }
+            .contact-intro h1 { font-size: 2rem; }
+            .header-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .main-nav {
+                gap: 1rem;
+                font-size: 0.8rem;
+            }
+            .search-wrap input {
+                width: 120px;
+            }
+            .contact-form .form-row {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            .contact-form {
+                padding: 1.5rem;
+            }
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px; height: 1px;
+            padding: 0; margin: -1px;
+            overflow: hidden;
+            clip: rect(0,0,0,0);
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+    <div class="container header-inner">
+        <a href="index.html" class="logo">Junction <span>Of</span> Forms</a>
+        <nav class="main-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html" style="color:var(--accent);">Contact</a></li>
+            <li><a href="terms.html">Terms Of Privacy</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="cookies.html">Cookies Policy</a></li>
+            <li><a href="disclaimer.html">Disclaimer</a></li>
+            <li><a href="categories.html">Categories</a></li>
+        </nav>
+        <div class="search-wrap">
+            <input type="text" id="searchInput" placeholder="Search articles..." aria-label="Search articles">
+            <button onclick="performSearch()" aria-label="Search">⌕</button>
+        </div>
+    </div>
+</header>
+
+<!-- ============ MAIN ============ -->
+<main class="site-main">
+    <div class="container">
+
+        <!-- CONTACT GRID -->
+        <div class="contact-grid">
+
+            <!-- LEFT: INTRO + FORM -->
+            <div class="contact-intro">
+                <h1>Let’s talk about<br>spaces & stories.</h1>
+                <p class="lead">Whether you have a story pitch, a question about a project, or simply want to share a thought—we read every message. Expect a reply within two working days.</p>
+
+                <form class="contact-form" onsubmit="handleContactSubmit(event)">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Your name</label>
+                            <input type="text" id="name" name="name" placeholder="e.g. Alex Rivera" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject" name="subject">
+                            <option value="general">General inquiry</option>
+                            <option value="pitch">Story pitch / editorial</option>
+                            <option value="feedback">Feedback on an article</option>
+                            <option value="collaboration">Collaboration / partnership</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Tell us what’s on your mind..." required></textarea>
+                    </div>
+
+                    <button type="submit">Send message →</button>
+                    <p class="contact-note">We’ll never share your details. By submitting, you agree to our <a href="privacy.html" style="color:var(--accent);text-decoration:underline;">privacy policy</a>.</p>
+                </form>
+
+                <!-- CONTACT FAQ -->
+                <section class="faq-section">
+                    <div style="font-size:0.8rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--muted);margin-bottom:1.5rem;border-bottom:1px solid var(--border);padding-bottom:0.75rem;">Before you write</div>
+                    <div id="contactFaq">
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFaq(this)">How quickly do you respond?</div>
+                            <div class="faq-answer">We aim to reply within two working days. If you’re pitching a time-sensitive story, please mention that in the subject line.</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFaq(this)">Do you accept guest articles?</div>
+                            <div class="faq-answer">Occasionally. We prefer pitches that are original, well-researched, and aligned with our editorial focus on spatial design, materials, and the experience of living. Send a short outline first.</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFaq(this)">Can I republish your content?</div>
+                            <div class="faq-answer">You may quote up to 100 words with a link back to the original article. For full republishing, please get in touch to discuss licensing.</div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- RIGHT: SIDEBAR / DETAILS -->
+            <aside class="contact-sidebar">
+                <div class="contact-widget">
+                    <h4>Editorial office</h4>
+                    <div class="detail-row">
+                        <div class="icon">✉</div>
+                        <div class="text">
+                            <strong>Email</strong>
+                            <a href="mailto:editorial@junctionofforms.com">editorial@junctionofforms.com</a>
+                        </div>
+                    </div>
+                    <div class="detail-row">
+                        <div class="icon">⌂</div>
+                        <div class="text">
+                            <strong>Postal address</strong>
+                            Junction Of Forms<br>
+                            12 Clerkenwell Green<br>
+                            London EC1R 0DP<br>
+                            United Kingdom
+                        </div>
+                    </div>
+                    <div class="detail-row">
+                        <div class="icon">☏</div>
+                        <div class="text">
+                            <strong>Phone</strong>
+                            <a href="tel:+442079460123">+44 (0)20 7946 0123</a>
+                            <span style="font-size:0.85rem;color:var(--muted);display:block;">Mon–Thu, 10am–4pm GMT</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-widget">
+                    <h4>Who you’ll reach</h4>
+                    <div class="author-card">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&auto=format&fit=crop&q=80" alt="Portrait of Elena Marchetti">
+                        <div>
+                            <p><strong>Elena Marchetti</strong></p>
+                            <p style="font-size:0.8rem;color:var(--muted);">Editor-in-chief</p>
+                        </div>
+                    </div>
+                    <div class="author-card">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80" alt="Portrait of James Okonkwo">
+                        <div>
+                            <p><strong>James Okonkwo</strong></p>
+                            <p style="font-size:0.8rem;color:var(--muted);">Contributing editor</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-widget">
+                    <h4>Follow the journal</h4>
+                    <ul>
+                        <li><a href="#">Instagram — @junctionofforms</a></li>
+                        <li><a href="#">Pinterest — /junctionofforms</a></li>
+                        <li><a href="#">Substack — thejunctionletter</a></li>
+                    </ul>
+                </div>
+
+                <div class="contact-widget">
+                    <h4>Response times</h4>
+                    <p style="font-size:0.9rem;">General inquiries: <strong>1–2 days</strong></p>
+                    <p style="font-size:0.9rem;">Pitches: <strong>3–5 days</strong></p>
+                    <p style="font-size:0.9rem;">Postal mail is collected weekly.</p>
+                </div>
+            </aside>
+        </div>
+
+    </div>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <h5>Junction Of Forms</h5>
+                <p style="font-size:0.9rem;color:var(--muted);max-width:300px;">An independent publication about interior design, architecture, and the art of living well. Published from London & Milan.</p>
+            </div>
+            <div>
+                <h5>Explore</h5>
+                <ul>
+                    <li><a href="categories.html">Interior Design</a></li>
+                    <li><a href="categories.html">Architecture</a></li>
+                    <li><a href="categories.html">Materials</a></li>
+                    <li><a href="categories.html">Lighting</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5>Information</h5>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5>Follow</h5>
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Pinterest</a></li>
+                    <li><a href="#">Substack</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2025 Junction Of Forms. All rights reserved.</span>
+            <span>Made with restraint.</span>
+        </div>
+    </div>
+</footer>
+
+<!-- ============ SCRIPTS ============ -->
+<script>
+    // ---------- FAQ toggle ----------
+    function toggleFaq(el) {
+        const item = el.parentElement;
+        item.classList.toggle('open');
+    }
+
+    // ---------- CONTACT FORM ----------
+    function handleContactSubmit(e) {
+        e.preventDefault();
+        const form = e.target;
+        const name = form.querySelector('#name').value.trim();
+        const email = form.querySelector('#email').value.trim();
+        const subject = form.querySelector('#subject').value;
+        const message = form.querySelector('#message').value.trim();
+
+        if (!name || !email || !message) {
+            alert('Please fill in all required fields.');
+            return;
+        }
+
+        // Simulate submission (no backend)
+        alert(`Thank you, ${name}. Your message regarding "${subject}" has been sent. We'll reply to ${email} within two working days.`);
+        form.reset();
+    }
+
+    // ---------- SEARCH (placeholder — behaves like main site) ----------
+    function performSearch() {
+        const query = document.getElementById('searchInput').value.trim();
+        if (query) {
+            alert(`Searching for "${query}" — in the full journal, this would filter articles. (Demo only)`);
+        } else {
+            alert('Please enter a search term.');
+        }
+    }
+
+    // Allow Enter key on search
+    document.getElementById('searchInput').addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') {
+            performSearch();
+        }
+    });
+</script>
+
+<!-- Schema markup for ContactPage -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact Junction Of Forms",
+    "description": "Get in touch with the editorial team at Junction Of Forms.",
+    "url": "https://www.junctionofforms.com/contact.html",
+    "mainEntity": {
+        "@type": "Organization",
+        "name": "Junction Of Forms",
+        "email": "editorial@junctionofforms.com",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "12 Clerkenwell Green",
+            "addressLocality": "London",
+            "postalCode": "EC1R 0DP",
+            "addressCountry": "GB"
+        }
+    }
+}
+</script>
+
+</body>
+</html>

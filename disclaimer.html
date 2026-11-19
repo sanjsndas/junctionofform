@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies Policy — Junction Of Forms</title>
+    <meta name="description" content="Cookies policy for Junction Of Forms. Learn how we use cookies and similar technologies to improve your reading experience.">
+    <link rel="canonical" href="https://www.junctionofforms.com/cookies.html">
+    <meta property="og:title" content="Cookies Policy — Junction Of Forms">
+    <meta property="og:description" content="How we use cookies and how you can control them. Read our full cookies policy.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1200">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <style>
+        /* ------ RESET & BASE ------ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #fbf9f6;
+            --surface: #ffffff;
+            --ink: #1e1e1e;
+            --ink-soft: #3d3d3d;
+            --muted: #6b6b6b;
+            --border: #e2ddd6;
+            --accent: #a67c52;
+            --accent-soft: #f2ede7;
+            --serif: 'Georgia', 'Times New Roman', Times, serif;
+            --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            --radius: 4px;
+            --maxw: 1280px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--ink);
+            font-family: var(--sans);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            font-size: 16px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            color: var(--ink);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--accent);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: var(--serif);
+            font-weight: 400;
+            line-height: 1.25;
+            letter-spacing: -0.01em;
+        }
+
+        h1 { font-size: 2.6rem; }
+        h2 { font-size: 1.7rem; margin: 2.5rem 0 0.75rem; }
+        h3 { font-size: 1.3rem; margin: 1.75rem 0 0.5rem; }
+        h4 { font-size: 1.1rem; }
+
+        p {
+            margin-bottom: 1.25rem;
+            color: var(--ink-soft);
+        }
+
+        ul, ol {
+            margin: 0 0 1.5rem 1.5rem;
+            color: var(--ink-soft);
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .container {
+            max-width: var(--maxw);
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* ------ HEADER (consistent) ------ */
+        .site-header {
+            border-bottom: 1px solid var(--border);
+            background: var(--bg);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.25rem 0;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .logo {
+            font-family: var(--serif);
+            font-size: 1.6rem;
+            letter-spacing: -0.02em;
+            white-space: nowrap;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .main-nav {
+            display: flex;
+            gap: 1.75rem;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            flex-wrap: wrap;
+        }
+
+        .main-nav a {
+            color: var(--ink-soft);
+        }
+
+        .main-nav a:hover {
+            color: var(--accent);
+        }
+
+        .search-wrap {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 0.35rem 0.75rem;
+            background: var(--surface);
+        }
+
+        .search-wrap input {
+            border: none;
+            background: transparent;
+            font-family: var(--sans);
+            font-size: 0.9rem;
+            outline: none;
+            width: 160px;
+            color: var(--ink);
+        }
+
+        .search-wrap input::placeholder {
+            color: #aaa;
+        }
+
+        .search-wrap button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            color: var(--muted);
+        }
+
+        /* ------ MAIN / COOKIES LAYOUT ------ */
+        .site-main {
+            padding: 3rem 0 5rem;
+        }
+
+        .cookies-grid {
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .cookies-content {
+            max-width: 780px;
+        }
+
+        .cookies-content h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.75rem;
+            line-height: 1.15;
+        }
+
+        .cookies-meta {
+            font-size: 0.9rem;
+            color: var(--muted);
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.25rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .cookies-content h2:first-of-type {
+            margin-top: 0;
+        }
+
+        .cookies-content .lead {
+            font-size: 1.15rem;
+            color: var(--muted);
+            margin-bottom: 2rem;
+        }
+
+        .cookies-content strong {
+            color: var(--ink);
+            font-weight: 600;
+        }
+
+        .cookies-content a {
+            color: var(--accent);
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        .cookies-content a:hover {
+            color: var(--ink);
+        }
+
+        .highlight-box {
+            background: var(--accent-soft);
+            border-left: 3px solid var(--accent);
+            padding: 1.25rem 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 var(--radius) var(--radius) 0;
+        }
+
+        .highlight-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .cookies-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0 2rem;
+            font-size: 0.9rem;
+        }
+
+        .cookies-content th,
+        .cookies-content td {
+            text-align: left;
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--border);
+        }
+
+        .cookies-content th {
+            background: var(--accent-soft);
+            font-weight: 600;
+            color: var(--ink);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .cookies-content td {
+            color: var(--ink-soft);
+        }
+
+        /* ------ SIDEBAR (table of contents) ------ */
+        .cookies-sidebar {
+            position: sticky;
+            top: 100px;
+        }
+
+        .toc-widget {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.75rem;
+            margin-bottom: 2rem;
+        }
+
+        .toc-widget h4 {
+            font-family: var(--sans);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--muted);
+            margin-bottom: 1.25rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .toc-widget ul {
+            list-style: none;
+            margin: 0;
+        }
+
+        .toc-widget li {
+            margin-bottom: 0.6rem;
+            font-size: 0.9rem;
+        }
+
+        .toc-widget li a {
+            color: var(--ink-soft);
+            display: block;
+            padding: 0.2rem 0;
+            border-left: 2px solid transparent;
+            padding-left: 0.75rem;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        .toc-widget li a:hover,
+        .toc-widget li a.active {
+            color: var(--accent);
+            border-left-color: var(--accent);
+        }
+
+        .sidebar-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+        }
+
+        .sidebar-card p {
+            font-size: 0.9rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .sidebar-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .sidebar-card .icon {
+            font-size: 1.5rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+
+        /* ------ BACK TO TOP ------ */
+        .back-to-top {
+            display: inline-block;
+            margin-top: 2.5rem;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--muted);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.2rem;
+        }
+
+        .back-to-top:hover {
+            color: var(--accent);
+            border-color: var(--accent);
+        }
+
+        /* ------ FOOTER (consistent) ------ */
+        .site-footer {
+            border-top: 1px solid var(--border);
+            padding: 3.5rem 0 2rem;
+            background: var(--surface);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-grid h5 {
+            font-family: var(--sans);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--muted);
+            margin-bottom: 1rem;
+        }
+
+        .footer-grid ul {
+            list-style: none;
+            margin: 0;
+        }
+
+        .footer-grid li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-grid a {
+            font-size: 0.9rem;
+            color: var(--ink-soft);
+        }
+
+        .footer-grid a:hover {
+            color: var(--accent);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--border);
+            padding-top: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: var(--muted);
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        /* ------ RESPONSIVE ------ */
+        @media (max-width: 1024px) {
+            .cookies-grid {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+            .cookies-sidebar {
+                position: static;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 720px) {
+            h1 { font-size: 2rem; }
+            .cookies-content h1 { font-size: 2rem; }
+            .header-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .main-nav {
+                gap: 1rem;
+                font-size: 0.8rem;
+            }
+            .search-wrap input {
+                width: 120px;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            .cookies-content table {
+                font-size: 0.8rem;
+            }
+            .cookies-content th,
+            .cookies-content td {
+                padding: 0.5rem 0.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+    <div class="container header-inner">
+        <a href="index.html" class="logo">Junction <span>Of</span> Forms</a>
+        <nav class="main-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="terms.html">Terms Of Privacy</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="cookies.html" style="color:var(--accent);">Cookies Policy</a></li>
+            <li><a href="disclaimer.html">Disclaimer</a></li>
+            <li><a href="categories.html">Categories</a></li>
+        </nav>
+        <div class="search-wrap">
+            <input type="text" id="searchInput" placeholder="Search articles..." aria-label="Search articles">
+            <button onclick="performSearch()" aria-label="Search">⌕</button>
+        </div>
+    </div>
+</header>
+
+<!-- ============ MAIN ============ -->
+<main class="site-main">
+    <div class="container">
+        <div class="cookies-grid">
+
+            <!-- LEFT: COOKIES CONTENT -->
+            <div class="cookies-content">
+                <h1>Cookies Policy</h1>
+                <div class="cookies-meta">
+                    Last updated: <strong>15 March 2025</strong> &nbsp;·&nbsp; Effective: 15 March 2025
+                </div>
+
+                <p class="lead">This Cookies Policy explains how Junction Of Forms (“we”, “us”, “our”) uses cookies and similar technologies on <strong>www.junctionofforms.com</strong>. It should be read alongside our <a href="privacy.html">Privacy Policy</a>.</p>
+
+                <p>We keep our use of cookies light and purposeful. We only use them to make the site work properly, understand which articles our readers enjoy, and remember your preferences. We don’t use them to track you across other websites or to serve you targeted advertising.</p>
+
+                <div class="highlight-box">
+                    <p><strong>In short:</strong> Essential cookies keep the site running. Analytics cookies help us understand what you read — and they’re anonymised. You can change or withdraw your consent at any time via your browser settings or by contacting us.</p>
+                </div>
+
+                <!-- 1. WHAT ARE COOKIES -->
+                <h2 id="what-are-cookies">1. What are cookies?</h2>
+                <p>Cookies are small text files that are stored on your device (computer, phone, or tablet) when you visit a website. They are widely used to make websites work more efficiently, as well as to provide information to the site owners.</p>
+                <p>Similar technologies include <strong>web beacons</strong> (tiny transparent images) and <strong>local storage</strong>, which can also store small amounts of data. In this policy, we use “cookies” to cover all these technologies.</p>
+
+                <!-- 2. HOW WE USE COOKIES -->
+                <h2 id="how-we-use">2. How we use cookies</h2>
+                <p>We use cookies for three main purposes:</p>
+                <ul>
+                    <li><strong>Essential functionality</strong> — to keep the site secure and running smoothly.</li>
+                    <li><strong>Analytics</strong> — to understand how readers navigate the site, which articles are most popular, and where we can improve.</li>
+                    <li><strong>Preferences</strong> — to remember choices you make, such as dismissing a notice or setting a reading preference.</li>
+                </ul>
+
+                <!-- 3. TYPES OF COOKIES -->
+                <h2 id="types">3. Types of cookies we use</h2>
+                <p>Below is a detailed breakdown of the cookies we set and why.</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Cookie name</th>
+                            <th>Type</th>
+                            <th>Purpose</th>
+                            <th>Duration</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>jof_session</td>
+                            <td>Essential</td>
+                            <td>Maintains your session while you browse the site, so pages load correctly.</td>
+                            <td>Session</td>
+                        </tr>
+                        <tr>
+                            <td>jof_cookie_consent</td>
+                            <td>Essential</td>
+                            <td>Stores your cookie preferences so we don’t ask you every time you visit.</td>
+                            <td>12 months</td>
+                        </tr>
+                        <tr>
+                            <td>jof_analytics</td>
+                            <td>Analytics</td>
+                            <td>Anonymised tracking of page views, time on page, and referral source. No personal identifiers.</td>
+                            <td>26 months</td>
+                        </tr>
+                        <tr>
+                            <td>jof_prefs</td>
+                            <td>Preference</td>
+                            <td>Remembers small UI choices, like whether you’ve dismissed a notice.</td>
+                            <td>6 months</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p>We do not use advertising or targeting cookies. If we ever introduce them, we will update this policy and ask for your explicit consent first.</p>
+
+                <!-- 4. THIRD-PARTY COOKIES -->
+                <h2 id="third-party">4. Third-party cookies</h2>
+                <p>We keep third-party cookies to an absolute minimum. Currently, we use:</p>
+                <ul>
+                    <li><strong>Analytics provider</strong> — a privacy-focused analytics service that sets anonymised cookies to help us measure readership. This data cannot be used to identify you personally.</li>
+                    <li><strong>Embedded content</strong> — if we embed a video or social media post, those platforms may set their own cookies. We have no control over these; please check the relevant platform’s cookie policy.</li>
+                </ul>
+
+                <!-- 5. MANAGING COOKIES -->
+                <h2 id="managing">5. Managing and disabling cookies</h2>
+                <p>You have the right to decide whether to accept or reject cookies. You can manage your preferences in several ways:</p>
+                <ul>
+                    <li><strong>Browser settings</strong> — most browsers allow you to block or delete cookies. Look for the “Privacy” or “Security” settings in your browser menu. Note that blocking essential cookies may affect how the site works.</li>
+                    <li><strong>Opt-out of analytics</strong> — you can use browser add-ons or settings to prevent analytics cookies from being set. Our analytics provider also offers a direct opt-out.</li>
+                    <li><strong>Withdraw consent</strong> — if you previously consented to non-essential cookies, you can change your mind at any time by clearing cookies in your browser and revisiting our site, or by contacting us directly.</li>
+                </ul>
+                <p>For more detailed guidance, visit <a href="https://www.aboutcookies.org" target="_blank" rel="noopener">aboutcookies.org</a> or <a href="https://www.allaboutcookies.org" target="_blank" rel="noopener">allaboutcookies.org</a>.</p>
+
+                <!-- 6. IMPACT OF DISABLING -->
+                <h2 id="impact">6. What happens if you disable cookies?</h2>
+                <p>If you disable or block cookies, some parts of the site may not function as intended. For example:</p>
+                <ul>
+                    <li>Essential cookies are required for the site to load correctly — without them, you may not be able to browse or use certain features.</li>
+                    <li>Analytics cookies help us improve the site. If you block them, your visit won’t be counted, but the site will still work.</li>
+                    <li>Preference cookies remember your settings. If you block them, you may need to re-enter preferences on each visit.</li>
+                </ul>
+
+                <!-- 7. UPDATES -->
+                <h2 id="updates">7. Updates to this policy</h2>
+                <p>We may update this Cookies Policy from time to time to reflect changes in technology, regulation, or our practices. The “Last updated” date at the top of this page will always reflect the most recent version. We encourage you to review this page periodically.</p>
+
+                <!-- 8. CONTACT -->
+                <h2 id="contact">8. Contact us</h2>
+                <p>If you have any questions about our use of cookies or this policy, please get in touch:</p>
+                <ul>
+                    <li><strong>Email:</strong> <a href="mailto:privacy@junctionofforms.com">privacy@junctionofforms.com</a></li>
+                    <li><strong>Post:</strong> Junction Of Forms, 12 Clerkenwell Green, London EC1R 0DP, United Kingdom</li>
+                </ul>
+                <p>For general editorial inquiries, please use our <a href="contact.html">contact page</a>.</p>
+
+                <a href="#" class="back-to-top">↑ Back to top</a>
+            </div>
+
+            <!-- RIGHT: SIDEBAR / TOC -->
+            <aside class="cookies-sidebar">
+                <div class="toc-widget">
+                    <h4>On this page</h4>
+                    <ul>
+                        <li><a href="#what-are-cookies">1. What are cookies?</a></li>
+                        <li><a href="#how-we-use">2. How we use cookies</a></li>
+                        <li><a href="#types">3. Types of cookies</a></li>
+                        <li><a href="#third-party">4. Third-party cookies</a></li>
+                        <li><a href="#managing">5. Managing cookies</a></li>
+                        <li><a href="#impact">6. What if you disable them?</a></li>
+                        <li><a href="#updates">7. Updates</a></li>
+                        <li><a href="#contact">8. Contact us</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-card">
+                    <div class="icon">🍪</div>
+                    <p><strong>Cookie questions?</strong></p>
+                    <p>Write to <a href="mailto:privacy@junctionofforms.com" style="color:var(--accent);">privacy@junctionofforms.com</a> and we’ll respond within 30 days.</p>
+                </div>
+
+                <div class="sidebar-card" style="margin-top:1.5rem;">
+                    <p style="font-size:0.85rem;color:var(--muted);">We keep cookies minimal. If anything is unclear, please ask — we’d rather explain than confuse.</p>
+                </div>
+            </aside>
+        </div>
+    </div>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <h5>Junction Of Forms</h5>
+                <p style="font-size:0.9rem;color:var(--muted);max-width:300px;">An independent publication about interior design, architecture, and the art of living well. Published from London &amp; Milan.</p>
+            </div>
+            <div>
+                <h5>Explore</h5>
+                <ul>
+                    <li><a href="categories.html">Interior Design</a></li>
+                    <li><a href="categories.html">Architecture</a></li>
+                    <li><a href="categories.html">Materials</a></li>
+                    <li><a href="categories.html">Lighting</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5>Information</h5>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5>Follow</h5>
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Pinterest</a></li>
+                    <li><a href="#">Substack</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2025 Junction Of Forms. All rights reserved.</span>
+            <span>Made with restraint.</span>
+        </div>
+    </div>
+</footer>
+
+<!-- ============ SCRIPTS ============ -->
+<script>
+    // ---------- SEARCH (placeholder — behaves like main site) ----------
+    function performSearch() {
+        const query = document.getElementById('searchInput').value.trim();
+        if (query) {
+            alert(`Searching for "${query}" — in the full journal, this would filter articles. (Demo only)`);
+        } else {
+            alert('Please enter a search term.');
+        }
+    }
+
+    // Allow Enter key on search
+    document.getElementById('searchInput').addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') {
+            performSearch();
+        }
+    });
+
+    // ---------- TOC ACTIVE STATE (scroll spy) ----------
+    (function() {
+        const tocLinks = document.querySelectorAll('.toc-widget a');
+        const sections = [];
+
+        tocLinks.forEach(link => {
+            const id = link.getAttribute('href').substring(1);
+            const section = document.getElementById(id);
+            if (section) {
+                sections.push({ id, link, section });
+            }
+        });
+
+        function updateActive() {
+            const scrollPos = window.scrollY + 140; // offset for sticky header
+            let current = null;
+
+            sections.forEach(item => {
+                if (item.section.offsetTop <= scrollPos) {
+                    current = item;
+                }
+            });
+
+            tocLinks.forEach(l => l.classList.remove('active'));
+            if (current) {
+                current.link.classList.add('active');
+            }
+        }
+
+        window.addEventListener('scroll', updateActive, { passive: true });
+        window.addEventListener('load', updateActive);
+        updateActive();
+    })();
+
+    // ---------- SMOOTH ANCHOR OFFSET (account for sticky header) ----------
+    document.querySelectorAll('.toc-widget a, .back-to-top').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (href && href.startsWith('#')) {
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) {
+                    const headerOffset = 90;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                    window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+                }
+            }
+        });
+    });
+</script>
+
+<!-- Schema markup for CookiesPolicy -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Cookies Policy — Junction Of Forms",
+    "description": "Cookies policy for Junction Of Forms. Learn how we use cookies and similar technologies to improve your reading experience.",
+    "url": "https://www.junctionofforms.com/cookies.html",
+    "dateModified": "2025-03-15",
+    "isPartOf": {
+        "@type": "WebSite",
+        "name": "Junction Of Forms",
+        "url": "https://www.junctionofforms.com"
+    },
+    "about": {
+        "@type": "Thing",
+        "name": "Cookies Policy"
+    }
+}
+</script>
+
+</body>       
+</html>

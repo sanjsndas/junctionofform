@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About — Junction Of Forms</title>
+    <meta name="description" content="About Junction Of Forms — an independent journal exploring interior design, architecture, and the art of living well.">
+    <link rel="canonical" href="https://www.junctionofforms.com/about.html">
+    <meta property="og:title" content="About — Junction Of Forms">
+    <meta property="og:description" content="An independent publication about interior design, architecture, and the art of living well.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1200">
+    <meta name="twitter:card" content="summary_large_image">
+    <style>
+        /* ------ RESET & BASE ------ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #fbf9f6;
+            --surface: #ffffff;
+            --ink: #1e1e1e;
+            --ink-soft: #3d3d3d;
+            --muted: #6b6b6b;
+            --border: #e2ddd6;
+            --accent: #a67c52;
+            --accent-soft: #f2ede7;
+            --serif: 'Georgia', 'Times New Roman', Times, serif;
+            --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            --radius: 4px;
+            --maxw: 1280px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--ink);
+            font-family: var(--sans);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            font-size: 16px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            color: var(--ink);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--accent);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: var(--serif);
+            font-weight: 400;
+            line-height: 1.25;
+            letter-spacing: -0.01em;
+        }
+
+        h1 { font-size: 2.6rem; }
+        h2 { font-size: 1.9rem; margin-bottom: 0.75rem; }
+        h3 { font-size: 1.35rem; margin-bottom: 0.5rem; }
+        h4 { font-size: 1.1rem; }
+
+        p {
+            margin-bottom: 1.25rem;
+            color: var(--ink-soft);
+        }
+
+        .container {
+            max-width: var(--maxw);
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* ------ HEADER ------ */
+        .site-header {
+            border-bottom: 1px solid var(--border);
+            background: var(--bg);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.25rem 0;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .logo {
+            font-family: var(--serif);
+            font-size: 1.6rem;
+            letter-spacing: -0.02em;
+            white-space: nowrap;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .main-nav {
+            display: flex;
+            gap: 1.75rem;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            flex-wrap: wrap;
+            list-style: none;
+        }
+
+        .main-nav a {
+            color: var(--ink-soft);
+        }
+
+        .main-nav a:hover,
+        .main-nav a.active {
+            color: var(--accent);
+        }
+
+        .search-wrap {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 0.35rem 0.75rem;
+            background: var(--surface);
+        }
+
+        .search-wrap input {
+            border: none;
+            background: transparent;
+            font-family: var(--sans);
+            font-size: 0.9rem;
+            outline: none;
+            width: 160px;
+            color: var(--ink);
+        }
+
+        .search-wrap input::placeholder {
+            color: #aaa;
+        }
+
+        .search-wrap button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            color: var(--muted);
+        }
+
+        /* ------ LAYOUT ------ */
+        .site-main {
+            padding: 3rem 0 5rem;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 3.5rem;
+            align-items: start;
+        }
+
+        /* ------ ABOUT CONTENT ------ */
+        .about-content h1 {
+            margin-bottom: 1.5rem;
+            font-size: 2.8rem;
+        }
+
+        .about-content .lead {
+            font-size: 1.2rem;
+            color: var(--muted);
+            margin-bottom: 2rem;
+            max-width: 700px;
+        }
+
+        .about-content h2 {
+            margin-top: 2.5rem;
+        }
+
+        .about-content h3 {
+            margin-top: 1.75rem;
+        }
+
+        .about-content img {
+            width: 100%;
+            height: auto;
+            border-radius: var(--radius);
+            margin: 2rem 0;
+        }
+
+        .about-content blockquote {
+            border-left: 3px solid var(--accent);
+            padding-left: 1.5rem;
+            margin: 2rem 0;
+            font-family: var(--serif);
+            font-size: 1.25rem;
+            font-style: italic;
+            color: var(--ink-soft);
+        }
+
+        .about-content blockquote p {
+            margin-bottom: 0;
+        }
+
+        .about-content ul {
+            margin: 1.5rem 0;
+            padding-left: 1.5rem;
+        }
+
+        .about-content li {
+            margin-bottom: 0.5rem;
+            color: var(--ink-soft);
+        }
+
+        .about-content .highlight-box {
+            background: var(--accent-soft);
+            border-left: 3px solid var(--accent);
+            padding: 1.75rem 2rem;
+            border-radius: var(--radius);
+            margin: 2rem 0;
+        }
+
+        .about-content .highlight-box p {
+            margin-bottom: 0;
+            font-size: 1.05rem;
+        }
+
+        /* ------ SIDEBAR ------ */
+        .sidebar {
+            position: sticky;
+            top: 100px;
+        }
+
+        .sidebar-widget {
+            margin-bottom: 2.5rem;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+        }
+
+        .sidebar-widget h4 {
+            font-family: var(--sans);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--muted);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .sidebar-widget ul {
+            list-style: none;
+        }
+
+        .sidebar-widget li {
+            margin-bottom: 0.75rem;
+            font-size: 0.9rem;
+        }
+
+        .sidebar-widget li a {
+            color: var(--ink-soft);
+        }
+
+        .sidebar-widget li a:hover {
+            color: var(--accent);
+        }
+
+        .sidebar-widget .author {
+            display: flex;
+            gap: 0.75rem;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .sidebar-widget .author img {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .sidebar-widget .author p {
+            font-size: 0.85rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .sidebar-widget .stat {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.9rem;
+        }
+
+        .sidebar-widget .stat:last-child {
+            border-bottom: none;
+        }
+
+        .sidebar-widget .stat .num {
+            font-family: var(--serif);
+            font-size: 1.1rem;
+            color: var(--accent);
+        }
+
+        /* ------ TEAM ------ */
+        .team-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .team-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .team-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 1rem;
+        }
+
+        .team-card h4 {
+            margin-bottom: 0.25rem;
+        }
+
+        .team-card .role {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--accent);
+            margin-bottom: 0.75rem;
+        }
+
+        .team-card p {
+            font-size: 0.9rem;
+            color: var(--muted);
+            margin-bottom: 0;
+        }
+
+        /* ------ NEWSLETTER ------ */
+        .newsletter-section {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 2.5rem;
+            margin: 4rem 0;
+            text-align: center;
+        }
+
+        .newsletter-section h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .newsletter-section p {
+            color: var(--muted);
+            margin-bottom: 1.5rem;
+        }
+
+        .newsletter-form {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .newsletter-form input {
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            font-family: var(--sans);
+            font-size: 0.95rem;
+            width: 280px;
+            outline: none;
+            background: var(--bg);
+        }
+
+        .newsletter-form input:focus {
+            border-color: var(--accent);
+        }
+
+        .newsletter-form button {
+            padding: 0.75rem 1.5rem;
+            background: var(--ink);
+            color: #fff;
+            border: none;
+            border-radius: var(--radius);
+            font-family: var(--sans);
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .newsletter-form button:hover {
+            background: var(--accent);
+        }
+
+        /* ------ FOOTER ------ */
+        .site-footer {
+            border-top: 1px solid var(--border);
+            padding: 3.5rem 0 2rem;
+            background: var(--surface);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-grid h5 {
+            font-family: var(--sans);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--muted);
+            margin-bottom: 1rem;
+        }
+
+        .footer-grid ul {
+            list-style: none;
+        }
+
+        .footer-grid li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-grid a {
+            font-size: 0.9rem;
+            color: var(--ink-soft);
+        }
+
+        .footer-grid a:hover {
+            color: var(--accent);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--border);
+            padding-top: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: var(--muted);
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        /* ------ RESPONSIVE ------ */
+        @media (max-width: 1024px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+            .sidebar {
+                position: static;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 720px) {
+            h1 { font-size: 2rem; }
+            .about-content h1 { font-size: 2.2rem; }
+            .header-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .main-nav {
+                gap: 1rem;
+                font-size: 0.8rem;
+            }
+            .search-wrap input {
+                width: 120px;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            .newsletter-form {
+                flex-direction: column;
+                align-items: center;
+            }
+            .newsletter-form input {
+                width: 100%;
+            }
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+    <div class="container header-inner">
+        <a href="index.html" class="logo">Junction <span>Of</span> Forms</a>
+        <nav class="main-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="terms.html">Terms Of Privacy</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="cookies.html">Cookies Policy</a></li>
+            <li><a href="disclaimer.html">Disclaimer</a></li>
+            <li><a href="categories.html">Categories</a></li>
+        </nav>
+        <div class="search-wrap">
+            <input type="text" id="searchInput" placeholder="Search articles..." aria-label="Search articles">
+            <button onclick="performSearch()" aria-label="Search">⌕</button>
+        </div>
+    </div>
+</header>
+
+<!-- ============ MAIN ============ -->
+<main class="site-main">
+    <div class="container">
+        <div class="about-grid">
+            <!-- ABOUT CONTENT -->
+            <div class="about-content">
+                <h1>About Junction Of Forms</h1>
+                <p class="lead">An independent journal for architects, designers, and thoughtful homeowners—exploring the spaces we inhabit and the ideas that shape them.</p>
+
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&auto=format&fit=crop&q=80" alt="Minimalist interior with warm wood flooring and natural light">
+
+                <p>Junction Of Forms was founded in 2021 by architect Elena Marchetti and writer James Okonkwo, out of a shared frustration with the way design is typically discussed. Too much of the conversation was either superficial—focused on trends, shopping, and quick fixes—or impenetrable, written for a narrow academic audience. We wanted to create something different: a publication that takes design seriously, but speaks to anyone who cares about how spaces feel.</p>
+
+                <p>The name comes from a simple observation: architecture and interior design are not separate disciplines. They are a single continuum. The way a building meets the sky, the way a door meets the floor, the way a chair meets the wall—these junctions are where design happens. They are the moments that determine whether a space feels calm or chaotic, generous or mean, alive or inert.</p>
+
+                <blockquote>
+                    <p>“The best spaces are not the ones you notice. They are the ones that make you feel more like yourself.”</p>
+                </blockquote>
+
+                <h2>What we publish</h2>
+                <p>We publish long-form essays, field guides, and case studies on a wide range of topics: spatial planning, materials, light, acoustics, furniture, sustainability, and the principles of beautiful, functional space. We are not interested in fads. We are interested in ideas that endure.</p>
+
+                <p>Our articles are written for people who want to understand not just what works, but why. We believe that good design is not a matter of taste—it is a matter of attention. When you pay close attention to how people actually live, the right solutions become clear.</p>
+
+                <div class="highlight-box">
+                    <p><strong>Our editorial independence is non-negotiable.</strong> We do not accept sponsored content, we do not run advertisements, and we do not allow commercial interests to influence what we write. Our only obligation is to our readers.</p>
+                </div>
+
+                <h2>Our principles</h2>
+                <ul>
+                    <li><strong>Clarity over cleverness.</strong> We write in plain language, without jargon or pretension.</li>
+                    <li><strong>Depth over speed.</strong> We take the time to research, reflect, and revise. Each article is a considered piece, not a hot take.</li>
+                    <li><strong>Substance over style.</strong> We care about how things look, but we care more about how they work—and how they make people feel.</li>
+                    <li><strong>Independence over influence.</strong> We are reader-supported and beholden to no one.</li>
+                </ul>
+
+                <h2>Who we are</h2>
+                <p>Junction Of Forms is a small, independent team. We are architects, designers, writers, and researchers. We have built, renovated, taught, and written about buildings for decades. We live in London and Milan, but our work takes us everywhere.</p>
+
+                <div class="team-grid">
+                    <div class="team-card">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&auto=format&fit=crop&q=80" alt="Elena Marchetti">
+                        <h4>Elena Marchetti</h4>
+                        <div class="role">Editor-in-Chief</div>
+                        <p>Architect and writer. 15 years in practice, with projects across Europe and the UK. Author of <em>The Threshold</em> (2023).</p>
+                    </div>
+                    <div class="team-card">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&auto=format&fit=crop&q=80" alt="James Okonkwo">
+                        <h4>James Okonkwo</h4>
+                        <div class="role">Contributing Editor</div>
+                        <p>Design critic and researcher. Former editor at <em>Building Design</em>. Specialises in passive systems and material culture.</p>
+                    </div>
+                </div>
+
+                <h2>Our commitment to you</h2>
+                <p>We are not here to sell you anything. We are here to help you see your own spaces more clearly—and to give you the tools to make them better. Whether you are planning a renovation, building a new home, or simply trying to make a single room feel right, we hope our work is useful to you.</p>
+
+                <p>Thank you for reading.</p>
+            </div>
+
+            <!-- SIDEBAR -->
+            <aside class="sidebar">
+                <div class="sidebar-widget">
+                    <h4>At a Glance</h4>
+                    <div class="stat">
+                        <span>Founded</span>
+                        <span class="num">2021</span>
+                    </div>
+                    <div class="stat">
+                        <span>Articles published</span>
+                        <span class="num">140+</span>
+                    </div>
+                    <div class="stat">
+                        <span>Readers</span>
+                        <span class="num">28k</span>
+                    </div>
+                    <div class="stat">
+                        <span>Based in</span>
+                        <span class="num">London & Milan</span>
+                    </div>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h4>Editorial Team</h4>
+                    <div class="author">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&auto=format&fit=crop&q=80" alt="Portrait of Elena Marchetti">
+                        <div>
+                            <p><strong>Elena Marchetti</strong></p>
+                            <p style="font-size:0.8rem;color:var(--muted);">Editor-in-Chief</p>
+                        </div>
+                    </div>
+                    <div class="author">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80" alt="Portrait of James Okonkwo">
+                        <div>
+                            <p><strong>James Okonkwo</strong></p>
+                            <p style="font-size:0.8rem;color:var(--muted);">Contributing Editor</p>
+                        </div>
+                    </div>
+                    <div class="author">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&auto=format&fit=crop&q=80" alt="Portrait of Sofia Lindqvist">
+                        <div>
+                            <p><strong>Sofia Lindqvist</strong></p>
+                            <p style="font-size:0.8rem;color:var(--muted);">Materials Editor</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h4>Popular This Month</h4>
+                    <ul>
+                        <li><a href="index.html">Facades That Breathe</a></li>
+                        <li><a href="index.html">Beyond the Pendant</a></li>
+                        <li><a href="index.html">The 18-Inch Rule</a></li>
+                        <li><a href="index.html">The Art of Negative Space</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="categories.html">Interior Design</a></li>
+                        <li><a href="categories.html">Architecture</a></li>
+                        <li><a href="categories.html">Materials</a></li>
+                        <li><a href="categories.html">Lighting</a></li>
+                        <li><a href="categories.html">Space Planning</a></li>
+                        <li><a href="categories.html">Furniture</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+
+        <!-- NEWSLETTER -->
+        <section class="newsletter-section">
+            <h3>The Junction Letter</h3>
+            <p>One thoughtful essay on design and architecture, delivered every other Sunday. No spam, no product pushes.</p>
+            <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+                <input type="email" placeholder="Your email address" required aria-label="Email address">
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
+    </div>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <h5>Junction Of Forms</h5>
+                <p style="font-size:0.9rem;color:var(--muted);max-width:300px;">An independent publication about interior design, architecture, and the art of living well. Published from London & Milan.</p>
+            </div>
+            <div>
+                <h5>Explore</h5>
+                <ul>
+                    <li><a href="categories.html">Interior Design</a></li>
+                    <li><a href="categories.html">Architecture</a></li>
+                    <li><a href="categories.html">Materials</a></li>
+                    <li><a href="categories.html">Lighting</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5>Information</h5>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5>Follow</h5>
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Pinterest</a></li>
+                    <li><a href="#">Substack</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2025 Junction Of Forms. All rights reserved.</span>
+            <span>Made with restraint.</span>
+        </div>
+    </div>
+</footer>
+
+<!-- ============ SCRIPTS ============ -->
+<script>
+    // Search functionality
+    const searchInput = document.getElementById('searchInput');
+
+    function performSearch() {
+        const query = searchInput.value.trim();
+        if (query) {
+            // In a real implementation, this would redirect to a search results page
+            alert('Searching for: "' + query + '"\n\nIn a full implementation, this would show search results across all articles.');
+        }
+    }
+
+    searchInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') {
+            performSearch();
+        }
+    });
+
+    // Newsletter subscription
+    function subscribeNewsletter(e) {
+        e.preventDefault();
+        const form = e.target;
+        const input = form.querySelector('input');
+        const email = input.value.trim();
+        if (email) {
+            alert('Thank you for subscribing to The Junction Letter. Please check your inbox to confirm.');
+            input.value = '';
+        }
+    }
+</script>
+
+<!-- Schema Markup -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About — Junction Of Forms",
+    "description": "An independent journal exploring interior design, architecture, and the art of living well.",
+    "url": "https://www.junctionofforms.com/about.html",
+    "mainEntity": {
+        "@type": "Organization",
+        "name": "Junction Of Forms",
+        "founder": [
+            {
+                "@type": "Person",
+                "name": "Elena Marchetti"
+            },
+            {
+                "@type": "Person",
+                "name": "James Okonkwo"
+            }
+        ],
+        "foundingDate": "2021",
+        "url": "https://www.junctionofforms.com/"
+    }
+}
+</script>
+
+</body>
+</html>
